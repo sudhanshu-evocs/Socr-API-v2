@@ -1,0 +1,276 @@
+[
+    {
+        "template": {
+            "name": "Defense Finance (LES)"
+        },
+        "producer": {
+            "name": "^PDFium.*"
+        },
+        "creator": {
+            "name": "^PDFium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 5,
+            "max": 20
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "CourierNewPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "CourierStd",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "CourierStd-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Defense Finance (LES)"
+        },
+        "producer": {
+            "name": "^PDFium.*"
+        },
+        "creator": {
+            "name": "^PDFium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 80,
+            "max": 90
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNewPS-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRomanPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Defense Finance (LES)"
+        },
+        "producer": {
+            "name": "^BitMiracle\\.Docotic\\.Pdf.*"
+        },
+        "creator": {
+            "name": "^BitMiracle\\.Docotic\\.Pdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 65
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Defense Finance (LES)"
+        },
+        "producer": {
+            "name": "^BitMiracle\\.Docotic\\.Pdf.*"
+        },
+        "creator": {
+            "name": "^BitMiracle\\.Docotic\\.Pdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 75,
+            "max": 90
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNewPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRomanPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "CourierNewPS-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Defense Finance (LES)"
+        },
+        "producer": {
+            "name": "^Adobe Experience Manager forms output.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 10,
+            "max": 65
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "CourierStd-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "CourierNewPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "CourierStd",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

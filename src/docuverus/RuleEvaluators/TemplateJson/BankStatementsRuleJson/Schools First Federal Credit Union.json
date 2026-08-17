@@ -1,0 +1,125 @@
+[
+    {
+        "template": {
+            "name": "Schools First Federal Credit Union"
+        },
+        "producer": {
+            "name": "^SchoolsFirst FCU using ABCpdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 160,
+            "max": 1450
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Consolas",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Schools First Federal Credit Union"
+        },
+        "producer": {
+            "name": "^SchoolsFirst FCU using ABCpdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 160,
+            "max": 1450
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Times",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Schools First Federal Credit Union"
+        },
+        "producer": {
+            "name": "^PDFlib Personalization Server.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 75
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma_FIXED",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

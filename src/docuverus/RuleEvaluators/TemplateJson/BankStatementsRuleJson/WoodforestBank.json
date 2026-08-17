@@ -1,0 +1,79 @@
+[
+    {
+        "template": {
+            "name": "Woodforest"
+        },
+        "producer": {
+            "name": "^PDFlib+PDI.*"
+        },
+        "creator": {
+            "name": "^VC Transaction.*"
+        },
+        "file_size": {
+            "min": 100,
+            "max": 350
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "OCRAExtended",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "SymbolMT",
+                    "type": "TrueType",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma-Bold",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Wingdings3",
+                    "type": "TrueType",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "DMATA",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

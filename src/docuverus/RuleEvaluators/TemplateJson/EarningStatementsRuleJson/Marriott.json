@@ -1,0 +1,108 @@
+[
+    {
+        "template": {
+            "name": "Marriott"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Marriott"
+        },
+        "producer": {
+            "name": "^Oracle Analytics Publisher.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 4,
+            "max": 30
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Go Noto Current Jp Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Marriott"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

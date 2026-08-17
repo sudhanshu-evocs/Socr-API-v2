@@ -1,0 +1,65 @@
+[
+    {
+        "template": {
+            "name": "Southside"
+        },
+        "producer": {
+            "name": "^\\[BMS_PDF clsPDFWriter.*"
+        },
+        "creator": {
+            "name": "^Computer Services, Inc.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-BoldOblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Inconsolata_LGC",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Lucida_Console",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

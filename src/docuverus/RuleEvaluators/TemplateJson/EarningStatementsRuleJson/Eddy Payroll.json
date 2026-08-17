@@ -1,0 +1,41 @@
+[
+    {
+        "template": {
+            "name": "Eddy Payroll"
+        },
+        "producer": {
+            "name": "^Eddy.*"
+        },
+        "creator": {
+            "name": "^Eddy.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "OpenSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "OpenSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

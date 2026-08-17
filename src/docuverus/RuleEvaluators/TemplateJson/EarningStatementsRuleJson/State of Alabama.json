@@ -1,0 +1,55 @@
+[
+    {
+        "template": {
+            "name": "State of Alabama"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 125,
+            "max": 225
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Segoe UI",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Segoe UI,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

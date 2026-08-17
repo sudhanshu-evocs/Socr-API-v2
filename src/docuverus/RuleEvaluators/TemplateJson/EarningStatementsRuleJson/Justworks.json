@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Justworks"
+        },
+        "producer": {
+            "name": "^Qt.*"
+        },
+        "creator": {
+            "name": "^wkhtmltopdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 75
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Oately-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Oately-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

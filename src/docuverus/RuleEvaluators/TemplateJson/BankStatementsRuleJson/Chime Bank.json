@@ -1,0 +1,61 @@
+[
+    {
+        "template": {
+            "name": "Chime Bank"
+        },
+        "producer": {
+            "name": "^Qt*"
+        },
+        "creator": {
+            "name": "^wkhtmltopdf*"
+        },
+        "file_size": {
+            "min": 50,
+            "max": 93
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "SourceSansPro-Bold",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "SourceSansPro-Light",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "SourceSansPro-Regular",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "DejaVuSans",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "NimbusSanL-Regu",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

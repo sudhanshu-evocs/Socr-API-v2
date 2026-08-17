@@ -1,0 +1,111 @@
+[
+    {
+        "template": {
+            "name": "HomePay"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 5,
+            "max": 15
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-BoldOblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "HomePay"
+        },
+        "producer": {
+            "name": "^Aspose\\.Pdf for \\.Net.*"
+        },
+        "creator": {
+            "name": "^Aspose Ltd\\..*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 40,
+            "max": 110
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Greater"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "HomePay"
+        },
+        "producer": {
+            "name": "^Amyuni Document Converter.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 45,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

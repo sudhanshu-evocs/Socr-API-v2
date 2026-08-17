@@ -1,0 +1,96 @@
+[
+    {
+        "template": {
+            "name": "NamelyPayroll"
+        },
+        "producer": {
+            "name": "^ActiveReports*"
+        },
+        "creator": {
+            "name": "^ActiveReports*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 30
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "MicrosoftSansSerif",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "NamelyPayroll"
+        },
+        "producer": {
+            "name": "^Xerox AltaLink C0835*"
+        },
+        "creator": {
+            "name": "^Xerox AltaLink C8035*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 30
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "MicrosoftSansSerif",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

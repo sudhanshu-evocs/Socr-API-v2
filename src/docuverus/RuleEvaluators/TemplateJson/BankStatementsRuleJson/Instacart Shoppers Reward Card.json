@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "Instacart Shoppers Reward Card"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Chromium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 115
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "InstacartSansTest-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "InstacartSansTest-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "InstacartSansTest-SemiBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

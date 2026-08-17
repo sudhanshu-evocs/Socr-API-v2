@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "Community America Credit Union"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 85,
+            "max": 425
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,102 @@
+[
+    {
+        "template": {
+            "name": "Consumers Credit Union"
+        },
+        "producer": {
+            "name": "^PDFlib\\+PDI.*"
+        },
+        "creator": {
+            "name": "^MPX.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 340,
+            "max": 480
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "AvertaStd-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "AvertaStd-Extrabold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "AvertaStd-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "AvertaStd-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "*Arial-Bold-313-Identity-H",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "*Times New Roman-Bold-311-Identity-H",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "*Times New Roman-Bold-312-Identity-H",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Consumers Credit Union"
+        },
+        "producer": {
+            "name": "^ULURO.*"
+        },
+        "creator": {
+            "name": "^ULURO.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 975,
+            "max": 3050
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,96 @@
+[
+    {
+        "template": {
+            "name": "Best Buy"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 28,
+            "max": 36
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Best Buy"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 29,
+            "max": 49
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

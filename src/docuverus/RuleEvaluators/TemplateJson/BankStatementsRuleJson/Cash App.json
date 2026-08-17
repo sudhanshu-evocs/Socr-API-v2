@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Cash App"
+        },
+        "producer": {
+            "name": "^openhtmltopdf\\.com.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 140
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "CashMarket-Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CashMarket-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

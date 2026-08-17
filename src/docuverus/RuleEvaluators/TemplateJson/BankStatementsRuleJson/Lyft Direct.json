@@ -1,0 +1,61 @@
+[
+    {
+        "template": {
+            "name": "Lyft Direct"
+        },
+        "producer": {
+            "name": "^ReportLab PDF Library.*"
+        },
+        "creator": {
+            "name": "^Payfare.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 95,
+            "max": 200
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ProximaNova-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ProximaNova-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ProximaNova-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ProximaNova-Semibold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

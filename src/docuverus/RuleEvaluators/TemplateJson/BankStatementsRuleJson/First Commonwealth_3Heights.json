@@ -1,0 +1,68 @@
+[
+    {
+        "template": {
+            "name": "First Commonwealth_3Heights"
+        },
+        "producer": {
+            "name": "^3\\-Heights.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 595,
+            "max": 755
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LucidaConsole",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FranklinGothic-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TwCenMT-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TwCenMT-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "IDAutomation2D",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

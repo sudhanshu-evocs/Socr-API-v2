@@ -1,0 +1,61 @@
+[
+    {
+        "template": {
+            "name": "Bright Star CU"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 150,
+            "max": 300
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "fon12",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRoman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRoman,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

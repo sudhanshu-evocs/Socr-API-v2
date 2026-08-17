@@ -1,0 +1,50 @@
+[
+    {
+        "template": {
+            "name": "Rivermark"
+        },
+        "producer": {
+            "name": "^PDFSharp.*"
+        },
+        "creator": {
+            "name": "^PDFSharp.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 35,
+            "max": 125
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

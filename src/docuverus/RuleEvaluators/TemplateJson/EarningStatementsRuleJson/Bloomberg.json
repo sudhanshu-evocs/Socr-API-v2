@@ -1,0 +1,107 @@
+[
+    {
+        "template": {
+            "name": "Bloomberg"
+        },
+        "producer": {
+            "name": "^PyPDF2.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 15,
+            "max": 35
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Berthold Akzidenz Grotesk BE Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Bloomberg"
+        },
+        "producer": {
+            "name": "^PyPDF2.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 135
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Berthold Akzidenz Grotesk BE Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Bloomberg"
+        },
+        "producer": {
+            "name": "^PyPDF2.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 135
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Berthold Akzidenz Grotesk BE Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

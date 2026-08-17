@@ -1,0 +1,143 @@
+[
+    {
+        "template": {
+            "name": "IBM"
+        },
+        "producer": {
+            "name": "^pdfmake.*"
+        },
+        "creator": {
+            "name": "^pdfmake.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 32,
+            "max": 55
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "IBMPlexMono",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "IBMPlexMono-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "IBMPlexSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "IBMPlexSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "IBM"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 6,
+            "max": 12
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "IBM"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

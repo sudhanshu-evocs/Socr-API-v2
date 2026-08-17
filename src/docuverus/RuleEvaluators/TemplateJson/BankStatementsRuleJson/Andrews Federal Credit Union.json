@@ -1,0 +1,67 @@
+[
+    {
+        "template": {
+            "name": "Andrews Federal Credit Union"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^OpenText Exstream.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 140,
+            "max": 210
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "EX_CFF_Arial_Narrow",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "EX_CFF_Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "EX_CFF_TahomaBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "EX_CFF_TahomaItalic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Symbol",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

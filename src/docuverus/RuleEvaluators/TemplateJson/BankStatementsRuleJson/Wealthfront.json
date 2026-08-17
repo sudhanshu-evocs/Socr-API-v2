@@ -1,0 +1,156 @@
+[
+    {
+        "template": {
+            "name": "Wealthfront"
+        },
+        "producer": {
+            "name": "^iText\u00ae Core.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 120,
+            "max": 180
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Wealthfront"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Mozilla/5\\.0.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 130,
+            "max": 285
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "LiberationSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LiberationSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LiberationSerif",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "DejaVuSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Loma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Wealthfront"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 150,
+            "max": 850
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "KievitSlabOT-Identity-H",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Lato-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Lato-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

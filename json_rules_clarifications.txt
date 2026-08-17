@@ -1,0 +1,83 @@
+Doubts regarding JSON Rules to get clarified with Jamie.
+
+[COMPLETED]
+1]BB&T Bank(Word) - Creation Date - NULL or Present
+	      Modifification Date - Present or Equal
+Solution - Create Date/Mod Date - NULL
+2]Citi Bank - BSCOURB; BSHWLVI - These optional fonts are not present in any documents(have they been removed?)
+Solution - We need to add 2 sets of fonts
+3]Charles Schwab - Assumption - if there are no fonts defined in the metadata rules, then we should continue to validate document via other rules.
+4]All json files - We should use None instead of Null, when Null is mentioned in the Metadata rules.
+5]For Discover Bank - In excel we have creator as None but in word document we have creator as None or Vault Rendering Engine. So added 2 rules with
+none creator and with Vault Rendering Engine creator
+6]For BB&T Bank - It looks like the required fonts may appear any number of times (multiplicity >= 1 basically) and it seems like Times-Roman may be an optional font, as many curated list documents show Times-Roman. - Looks to be an asterisk next to deposited checks in the bank statement, Times-Roman should be treated as an optional font.
+7]For Ally bank - Not seeing Times-RomanPSMT or SymbolMT in most curated documents - get a larger sample size for checking these fonts, and then double check. - I've moved these to optional_fonts for now, but sometimes they appear with type "TrueType", and sometimes it is "Type0", so maybe we should add the ability to do regex checks on font types when we have multiple options like this?
+For Ally Bank in rules its return that create date should be NULL but from library we are getting create date but not shown in adobe. - In the case of ally bank, we can see that all of the documents are coming back with a created date that adobe could not detect.  Its format is odd, but since we have enough ally bank and they all have the created date, we should have our new system's rule created:present
+8]For Bank of America (Bank statements) - Sometimes Connections_MediumBold appears in valid curated documents - check these over and see where the fonts are appearing, for bank of america it seems to be on a final page that has additional info.
+22)In the Oracle directory, we really seem to have mostly "Type Y" template files, as we see a mixture of Liberation Serif and Liberation Serif Bold OR Times Bold and Times Roman.  The file sizes are odd, and I've slightly lowered the range to accept a few additional files
+    * AdventHealth - does seem to have 42-43KB size
+    * Some of these other Oracle files (which are Type Y because of the model training flipping Y and Z) have images that are blowing the filesize up
+21)NYC - specifically NYC Health and NYC2 - we don't have a template for these, but they are in the curated list
+  * NYC Health - these should be Type Y
+  * NYC2 - there is a folder in the ML training for NYC2, should be able to create a template for this
+20)Zenefits - metadata rules docs say 38-42 filesize, but realistically it looks like 38-45 is better for the files in the curated list
+  * probably fine, just due to limited sample size we didn't know if 45 was reasonable
+17) For Accenture we have seen Roboto-Bold and Roboto-Regular fonts in all documents and in rules helvetica and helvetica -bold are there.
+18)For accenture - some of them have bonus and paystubs are of 2 pages and file size is increased.(Sheh,Vhasure,Williams)
+  * These can be treated as multiple paystubs for the purposes of checking file-size.
+15)Bank of America - File sizes are above the range of 260-450KB - Zmijiewski, Flink - these seem to have lots of attached check images.  Haas - Seems to be due to a lot of additional pages at the end of the bank statement
+  * Work on the file size without the check images
+16)Bank of america - File sizes are below the range of 260-450KB - Vega, Bloch, Gallotti - all pretty simple paystubs, can't figure out why they are so much under the range
+  * This would be a case where the file size is below spec, and we should flag as "Needs Further Verification" if everything else is correct.
+30)Johns Hopkins - The "Author" rule in Advanced Metadata Rules seems incorrect, the author can be a lot of things based on what I see. - author was probably just incorrectly logged, we'll remove it
+29)JP Morgan - Mitchell - has a producer we expect, but not with the dates we expect
+* Mitchell seems to have been "save as'd" - and has created and modified dates which are equal as a result.  It appears nothing else has changed.
+29 JP Morgan)
+ 043122 Tarver has a much larger filesize than expected - this should not be valid at this time, remove it from our testing
+ 042922 Pernick - this shouldn't be in the curated list at all (or at least remove from socr_revamp testing)
+ , sallehhoddin is an image pdf with no fonts - this shouldn't be in the curated list at all (or at least remove from socr_revamp testing)
+
+[IN PROGRESS]
+9]For Capital One Bank statements, it looks like some fonts can appear multiple times
+10 For chime bank valid file is 50-90 but some files has 92Kb so increased the file size range from 50-93.
+11) Wells fargo - none of the curated list files have a creation date, but all rules are written to expect one?
+12) Santander Bank - seems like there are more optional fonts than what are in the metadata rules documents.
+13)Wells fargo - wells fargo and wells fargo prime are consider under one class?
+14)US Bank - C0000365_T1001140_0, C0000690_T1001140_0,C0SY09_T1001140_0 - are these optional fonts? C0000864_T1001140_0 - is this a valid optional font?
+19)For Baltimore PS we have added the new rule with itext producer
+23)Paylocity - looks like it should have a linear file-size algorithm as the multi-pay stub pdfs are roughly 2x the size of single page ones.
+24)Rippling - I only have one that has NimbusSans-Regular more than it should, but it doesn't look particularly fraudulent: Rippling Hashflow Paystub 061523 - Ionescu.pdf" - also, the rules state created/moddate null/null, but it looks like it should be present/null
+25)Type V - We see other producers, but they are similar: Form ZC516_M10_ESS_PAYSLIP_TO_PDF_1 EN, Form ZF_XADP_M10_PAYSLIP_NEW EN, Form ZC230_M10_ESS_PAYSLIP_TO_PDF EN
+26)Workday type z - Univ of Washington and Mastery Charter both have file sizes way outside of the range, and all workday ones have images it seems, so it doesn't seem related to that.  Univ of Washington also has more fonts than in the spec (Helvetica-Bold and Times-Bold)
+27)Fusion Employer Services - improperly stored in curated list under mvQuery, and it looks like the modified date should actually be none, not <= created date
+28)Justworks - Justworks Ketterer Browne Paystub 092923 - Timmons.pdf - ever so slightly smaller file size than the range
+31)For CVS paystubs we have different fonts for every paystub so added in optional fonts.
+32) Added rule for Disney Paystub - need to verify once (need to check one file - Adams as it looks like further verification required)
+33)Need to figure out the rule for Giant paystub
+34)Fifth Third Bank - a couple of files in the curated list are outside of filesize spec, but they are also just very large statements, and one has a final "explanation" page not seen in others.
+35)Insperity - some files are much smaller (85KB instead of min of 115KB), I think it looks reasonable to just widen the file size range.
+36)Intuit - There are 3 rule-sets, but the rules that I found in the spreadsheet weren't exact (I was seeing a producer of Etymon PJ instead of Acrobat Distiller for instance, and I was finding optional fonts not mentioned in the spreadsheet, and also incorrect fonts for the Aspose.Words produced ones.
+37)Intuit - 20-35KB for iText produced Intuit documents seems slightly too small, maybe should be 20-40KB
+
+
+
+
+
+Here are the rule sets we haven't created:
+1] Securance LLC with developer express producer
+
+
+Invalid curated list files that come back as valid currently:
+C:\Workspace\docuverus\dv-automation\RestassuredAPITesting\curated_list_jamie1\Banking\Invalid\cash_app_bank\F Cash App Bank Statement 113023 - King.pdf
+* Don't know why this is in the curated invalid list, it passes in production, and passes our minimal cash_app rules
+* Cash app rule will be modified with further fonts (cash market, double check with doc) and a file size check.
+
+C:\Workspace\docuverus\dv-automation\RestassuredAPITesting\curated_list_jamie1\Income\Invalid Income\ADP2\F ADP2 J and G Spas Paystub 031023 - MedinaCarkuff.pdf
+* Needs further research
+
+C:\Workspace\docuverus\dv-automation\RestassuredAPITesting\curated_list_jamie1\Income\Invalid Income\Intuit\F! Intuit Hyperform design Paystub 020923 - Seto.pdf
+C:\Workspace\docuverus\dv-automation\RestassuredAPITesting\curated_list_jamie1\Income\Invalid Income\Intuit\F! Intuit Hyperform design Paystub 022323 - Seto.pdf
+C:\Workspace\docuverus\dv-automation\RestassuredAPITesting\curated_list_jamie1\Income\Invalid Income\Intuit\F! Intuit Hyperform design Paystub 030923 - Seto.pdf
+* Intuit - possibly encoding is odd on the invalid documents, the xref table has further info we are not parsing on the fonts yet.
+
+For Type U(Dotted Line) we have different producer versions present though the fonts and dates combination matches-Need more samples to confirm.

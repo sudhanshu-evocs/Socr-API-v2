@@ -1,0 +1,212 @@
+[
+    {
+        "template": {
+            "name": "Winteam"
+        },
+        "producer": {
+            "name": "^Powered by Crystal.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 110,
+            "max": 140
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Italic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNew",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNew,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Winteam"
+        },
+        "producer": {
+            "name": "^WinTeam.*"
+        },
+        "creator": {
+            "name": "^WinTeam.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 5,
+            "max": 15
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Winteam"
+        },
+        "producer": {
+            "name": "^WinTeam.*"
+        },
+        "creator": {
+            "name": "^WinTeam.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 160,
+            "max": 215
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNew",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNew,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "TimesNewRoman,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

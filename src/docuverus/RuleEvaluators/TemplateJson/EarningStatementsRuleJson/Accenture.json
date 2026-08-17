@@ -1,0 +1,125 @@
+[
+    {
+        "template": {
+            "name": "Accenture"
+        },
+        "producer": {
+            "name": "^iTextSharp.*"
+        },
+        "creator": {
+            "name": "^Accenture.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 3,
+            "max": 5
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Accenture"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Mozilla/5\\.0.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 100,
+            "max": 200
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Verdana",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Verdana-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Accenture"
+        },
+        "producer": {
+            "name": "^iTextSharp.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 3,
+            "max": 25
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

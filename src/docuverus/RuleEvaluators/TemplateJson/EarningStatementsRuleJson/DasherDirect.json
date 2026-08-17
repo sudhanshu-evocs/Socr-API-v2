@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Dasher Direct"
+        },
+        "producer": {
+            "name": "^ReportLab PDF Library.*"
+        },
+        "creator": {
+            "name": "^Payfare.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 55
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

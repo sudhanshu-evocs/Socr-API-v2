@@ -1,0 +1,73 @@
+[
+    {
+        "template": {
+            "name": "Vanguard"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^OpenText Exstream.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 230,
+            "max": 325
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Univers_LT_67_CondensedBoldBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers_LT_Std_45_LightBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers_LT_Std_47_Cn_Lt",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers_LT_Std_47_Cn_LtBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers_LT_Std_55",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers_LT_Std_57_Cn",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "UniversLTStd-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

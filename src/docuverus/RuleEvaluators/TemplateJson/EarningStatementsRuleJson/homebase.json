@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "homebase"
+        },
+        "producer": {
+            "name": "^Prawn*"
+        },
+        "creator": {
+            "name": "^Prawn*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 25,
+            "max": 50
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": [
+                {
+                    "name": "PlusJakartaSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "PlusJakartaSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

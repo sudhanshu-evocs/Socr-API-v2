@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "Premier Health"
+        },
+        "producer": {
+            "name": "^ComponentOne PDF Generator.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 0,
+            "max": 10
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Brush Script MT-Italic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

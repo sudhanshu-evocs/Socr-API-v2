@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Peoplesoft"
+        },
+        "producer": {
+            "name": "^PDFlib.*"
+        },
+        "creator": {
+            "name": "^SQR for Peoplesoft.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 0,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

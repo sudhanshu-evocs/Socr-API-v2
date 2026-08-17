@@ -1,0 +1,220 @@
+[
+    {
+        "template": {
+            "name": "ADPDiff"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 14,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "Type 1",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "ADPDiff"
+        },
+        "producer": {
+            "name": "^OpenText Output Transformation Engine.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 135,
+            "max": 195
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial Italic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier New",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier New Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times New Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "ADPDiff"
+        },
+        "producer": {
+            "name": "^OpenText Output Transformation Engine.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 30
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Liberation Mono",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "ADPDiff"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 14,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

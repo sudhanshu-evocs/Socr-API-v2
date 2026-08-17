@@ -1,0 +1,166 @@
+[
+    {
+        "template": {
+            "name": "State of CA"
+        },
+        "producer": {
+            "name": "^PDFKit.*"
+        },
+        "creator": {
+            "name": "^PDFKit.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 800,
+            "max": 900
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "State of CA"
+        },
+        "producer": {
+            "name": "^PDFKit.*"
+        },
+        "creator": {
+            "name": "^PDFKit.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 800,
+            "max": 900
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "State of CA"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 800,
+            "max": 900
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "State of CA"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 800,
+            "max": 900
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "template": {
+            "name": "Virginia Credit Union"
+        },
+        "producer": {
+            "name": "^FolioPDF.*"
+        },
+        "creator": {
+            "name": "^DATAMATX Inc\\..*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 450,
+            "max": 880
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "3_of_9_Barcode",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Avenir_45_Book",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Univers_CondensedBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "UniversBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Code39Eight",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "USPSIMBCompact",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

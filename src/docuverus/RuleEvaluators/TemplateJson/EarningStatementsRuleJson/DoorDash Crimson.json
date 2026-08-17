@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "DoorDash Crimson"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Mozilla/5\\.0.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 160,
+            "max": 900
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "LiberationSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LiberationSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Loma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

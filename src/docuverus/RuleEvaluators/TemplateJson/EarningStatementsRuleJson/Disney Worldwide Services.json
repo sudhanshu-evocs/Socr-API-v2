@@ -1,0 +1,84 @@
+[
+    {
+        "template": {
+            "name": "Disney Worldwide Services"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 25,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Disney Worldwide Services"
+        },
+        "producer": {
+            "name": "^PDFium.*"
+        },
+        "creator": {
+            "name": "^PDFium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 10,
+            "max": 20
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

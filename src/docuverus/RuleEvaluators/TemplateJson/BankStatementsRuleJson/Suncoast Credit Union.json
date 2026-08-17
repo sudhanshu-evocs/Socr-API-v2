@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "Suncoast Credit Union"
+        },
+        "producer": {
+            "name": "^Adobe PDF Library.*"
+        },
+        "creator": {
+            "name": "^Quadient\\~Inspire.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 135
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

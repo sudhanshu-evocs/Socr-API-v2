@@ -1,0 +1,108 @@
+[
+    {
+        "template": {
+            "name": "BB&T"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "min": 25,
+            "max": 70
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "Present"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "BB&T"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "min": 25,
+            "max": 65
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

@@ -1,0 +1,103 @@
+[
+    {
+        "template": {
+            "name": "Sage Payroll"
+        },
+        "producer": {
+            "name": "^PDF Sharp.*"
+        },
+        "creator": {
+            "name": "^PDF Sharp.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 140,
+            "max": 215
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Sage Payroll"
+        },
+        "producer": {
+            "name": "^PDFsharp.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 68,
+            "max": 75
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNew",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

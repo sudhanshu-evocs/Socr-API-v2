@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Type P"
+        },
+        "producer": {
+            "name": "^PDFSharp.*"
+        },
+        "creator": {
+            "name": "^PDFSharp.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 70,
+            "max": 130
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Times New Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times New Roman,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

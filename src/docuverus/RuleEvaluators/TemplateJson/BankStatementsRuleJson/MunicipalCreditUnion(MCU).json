@@ -1,0 +1,72 @@
+[
+    {
+        "template": {
+            "name": "Municipal Credit Union (MCU)"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^OpenText Exstream.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "EX_CFF_Arial_Narrow",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Times-Bold",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

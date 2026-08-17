@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "TruMark"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^Quadient Group AG.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

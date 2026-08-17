@@ -1,0 +1,102 @@
+[
+    {
+        "template": {
+            "name": "Lowe's Home Centers, LLC"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 0,
+            "max": 15
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Lowe's Home Centers, LLC"
+        },
+        "producer": {
+            "name": "^iOS Version.*"
+        },
+        "creator": {
+            "name": "^pdftopdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 25
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "FontDescriptor",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "TrueType",
+                    "encoding": "MacRomanEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "FontDescriptor",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "TrueType",
+                    "encoding": "MacRomanEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

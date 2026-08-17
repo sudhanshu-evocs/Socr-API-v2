@@ -1,0 +1,385 @@
+[
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^PDFFrom PDFNet.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 80,
+            "max": 130
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^PDFlib\\+PDI.*"
+        },
+        "creator": {
+            "name": "^FIS Global Corp.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 680,
+            "max": 825
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial-ItalicMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "MyriadPro-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^Debenu Quick PDF Library.*"
+        },
+        "creator": {
+            "name": "^Debenu Quick PDF Library.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 300,
+            "max": 315
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^PDFlib.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 120,
+            "max": 140
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^PDFlib.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 500,
+            "max": 615
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^Smart Communications.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 450,
+            "max": 600
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-RegularItalic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^Foxit Quick PDF Library.*"
+        },
+        "creator": {
+            "name": "^Foxit Quick PDF Library.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 300,
+            "max": 1150
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Express"
+        },
+        "producer": {
+            "name": "^Debenu Quick PDF Library.*"
+        },
+        "creator": {
+            "name": "^Debenu Quick PDF Library.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 775,
+            "max": 800
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "BentonSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

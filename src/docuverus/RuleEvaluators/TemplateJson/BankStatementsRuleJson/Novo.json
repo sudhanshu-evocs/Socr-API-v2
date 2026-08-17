@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Novo"
+        },
+        "producer": {
+            "name": "^pdfmake.*"
+        },
+        "creator": {
+            "name": "^pdfmake.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 10,
+            "max": 30
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Roboto-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

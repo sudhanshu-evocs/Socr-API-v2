@@ -1,0 +1,57 @@
+flowchart TD
+    Start["PDF bytes + caller-supplied template"]
+    Extract["Extract metadata"]
+    Exception{"Metadata exception?"}
+    Image{"Image-only PDF?"}
+    InvalidPdf["Fail\nMSG_INVALID_PDF_FILE"]
+    InvalidImage["Fail\nMSG_INVALID_IMAGE_DOCUMENT"]
+
+    Start --> Extract --> Exception
+    Exception -->|Yes| InvalidPdf
+    Exception -->|No| Image
+    Image -->|Yes| InvalidImage
+    Image -->|No| Load["Load all matching template rule sets"]
+
+    Load --> Evaluate["CompositeRuleEvaluator"]
+
+    subgraph FieldRules["Field-level business rules"]
+        Template["Template name"]
+        Size["File size"]
+        Identity["Producer + creator + author"]
+        Browser["Browser-printed override"]
+        Fonts["Required/optional/additional fonts"]
+        Dates["Creation/modification dates"]
+
+        Template --> Size --> Identity --> Browser --> Fonts --> Dates
+    end
+
+    Evaluate --> Template
+    Dates --> Select["FraudDetector selects result"]
+
+    Select --> Pass{"Acceptable rule set?"}
+    Pass -->|Yes| Valid["Pass\nMSG_VALID_FILE"]
+    Pass -->|No| Override{"Date override qualifies?\n0 < modification - creation < 5 hours"}
+    Override -->|Yes| SaveAs["FDR\nMSG_POSSIBLE_MODIFICATION_SAVE_AS_SCENARIO"]
+    Override -->|No| Unknown{"No matching rule set?"}
+    Unknown -->|Yes| UnknownResult["FDR\nMSG_UNKNOWN_TEMPLATE_TYPE"]
+    Unknown -->|No| Printed{"Browser-printed rule set?"}
+    Printed -->|Yes| PrintedResult["FDR\nMSG_BROWSER_PRINTED_DOCUMENT"]
+    Printed -->|No| InvalidMetadata{"Invalid producer/creator prefix?"}
+    InvalidMetadata -->|Yes| InvalidFile["Fail\nMSG_INVALID_FILE"]
+    InvalidMetadata -->|No| Further["FDR\nMSG_FURTHER_DOCUMENTATION_REQUIRED"]
+
+    Valid --> Finalize["Apply maximum validation level\nthen selected-font failure override"]
+    SaveAs --> Finalize
+    UnknownResult --> Finalize
+    PrintedResult --> Finalize
+    InvalidFile --> Finalize
+    Further --> Finalize
+
+    Finalize --> Response["Final validation result"]
+
+    classDef fail fill:#f8d7da,stroke:#b02a37,color:#000;
+    classDef review fill:#fff3cd,stroke:#997404,color:#000;
+    classDef pass fill:#d1e7dd,stroke:#146c43,color:#000;
+    class InvalidPdf,InvalidImage,InvalidFile fail;
+    class SaveAs,UnknownResult,PrintedResult,Further review;
+    class Valid pass;

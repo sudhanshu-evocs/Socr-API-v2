@@ -1,0 +1,91 @@
+[
+    {
+        "template": {
+            "name": "University"
+        },
+        "producer": {
+            "name": "^Apache FOP.*"
+        },
+        "creator": {
+            "name": "^Apache FOP.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 240,
+            "max": 270
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "OpenSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "OpenSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "University"
+        },
+        "producer": {
+            "name": "^FastReport\\.NET.*"
+        },
+        "creator": {
+            "name": "^FastReport.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 70,
+            "max": 255
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Arial-ItalicMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

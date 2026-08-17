@@ -1,0 +1,102 @@
+[
+    {
+        "template": {
+            "name": "SSA Benefit Letters"
+        },
+        "producer": {
+            "name": "^iText® Core*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 68,
+            "max": 125
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "SSA Benefit Letters"
+        },
+        "producer": {
+            "name": "^Customer Communications Manager*"
+        },
+        "creator": {
+            "name": "^Customer Communications Management*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 80,
+            "max": 95
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "CenturySchoolbook",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CenturySchoolbook-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "New",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ScriptMTBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "USPSIMBStandard",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

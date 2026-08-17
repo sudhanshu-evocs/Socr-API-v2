@@ -1,0 +1,103 @@
+[
+    {
+        "template": {
+            "name": "Marine Corps"
+        },
+        "producer": {
+            "name": "^Adobe Experience Manager forms output.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 25,
+            "max": 35
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierStd",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Marine Corps"
+        },
+        "producer": {
+            "name": "^BitMiracle\\.Docotic\\.Pdf.*"
+        },
+        "creator": {
+            "name": "^BitMiracle\\.Docotic\\.Pdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 60,
+            "max": 70
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Consolas",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "CourierStd",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

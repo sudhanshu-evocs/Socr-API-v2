@@ -1,0 +1,125 @@
+[
+    {
+        "template": {
+            "name": "Georgia-Pacific"
+        },
+        "producer": {
+            "name": "^SAP NetWeaver 740.*"
+        },
+        "creator": {
+            "name": "^Form ZHR_ESS_PAYSLIP_TO_PDF EN.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 260,
+            "max": 285
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Georgia-Pacific"
+        },
+        "producer": {
+            "name": "^iOS Version.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 35,
+            "max": 165
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Georgia-Pacific"
+        },
+        "producer": {
+            "name": "^macOS Version.*"
+        },
+        "creator": {
+            "name": "^Form ZHR_ESS_PAYSLIP_TO_PDF EN.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 260,
+            "max": 285
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

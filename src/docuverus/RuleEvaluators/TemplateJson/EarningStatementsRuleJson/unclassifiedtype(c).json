@@ -1,0 +1,50 @@
+[
+    {
+        "template": {
+            "name": "unclassifiedtype(c)"
+        },
+        "producer": {
+            "name": "^Powered By Crystal.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 40,
+            "max": 70
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Arial,BoldItalic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

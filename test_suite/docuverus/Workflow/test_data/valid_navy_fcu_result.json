@@ -1,0 +1,477 @@
+{
+    "final_validation_results": {
+        "valid": "Fail",
+        "validation_message_code": "MSG_INVALID_FILE"
+    },
+    "template_rule_set_validation_results": [
+        {
+            "template": {
+                "name": "Navy FCU",
+                "actual": "Navy FCU",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH",
+                "actual_confidence": 96
+            },
+            "producer": {
+                "name": "^303e-CM AIX.*",
+                "actual": "Ricoh Americas Corporation, AFP2PDF Plus Version: 1.300.53, AIX",
+                "valid": "Fail",
+                "validation_message_code": "MSG_PRODUCER_DOES_NOT_MATCH"
+            },
+            "creator": {
+                "name": "^Ricoh Production Print Solutions.*",
+                "actual": "Ricoh Americas Corporation, AFP2PDF Plus Version: 1.300.53; PDF/UA Version: 1.3.27; Control file: CombinedStmts.Master.xml version: 8.7",
+                "valid": "Fail",
+                "validation_message_code": "MSG_CREATOR_DOES_NOT_MATCH"
+            },
+            "file_size": {
+                "algorithm": "Unknown",
+                "actual": 516.96,
+                "valid": "NOT_APPLICABLE",
+                "validation_message_code": "MSG_VALID_FILE_SIZE_UNKNOWN"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "Courier",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "Helvetica",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "Helvetica-Bold",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "Helvetica-Oblique",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [],
+                "additional_fonts": [
+                    {
+                        "name": "C0A05570_T1DCDCFS_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0D0GT12_T1D0BASE_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0D0GT24_T1D0BASE_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H20000_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H20060_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H20070_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H20080_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H20090_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H30080_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H40000_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 3,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H40060_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H40070_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H40080_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H40090_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0H400B0_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "C0L00AON_T1L0OCR1_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "spaceFont",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    }
+                ],
+                "valid": "Fail",
+                "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20220209135314-05'00'",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "Equal",
+                    "actual": "D:20220209135315-05'00'",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_DATES_VALID_TOLERANCE"
+                },
+                "valid": "Pass",
+                "validation_message_code": "MSG_VALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "Navy Federal Credit Union",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        },
+        {
+            "template": {
+                "name": "Navy FCU",
+                "actual": "Navy FCU",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH",
+                "actual_confidence": 96
+            },
+            "producer": {
+                "name": "^Ricoh Americas Corporation.*",
+                "actual": "Ricoh Americas Corporation, AFP2PDF Plus Version: 1.300.53, AIX",
+                "valid": "Pass",
+                "validation_message_code": "MSG_PRODUCER_MATCH"
+            },
+            "creator": {
+                "name": "^Ricoh Americas Corporation.*",
+                "actual": "Ricoh Americas Corporation, AFP2PDF Plus Version: 1.300.53; PDF/UA Version: 1.3.27; Control file: CombinedStmts.Master.xml version: 8.7",
+                "valid": "Pass",
+                "validation_message_code": "MSG_CREATOR_MATCH"
+            },
+            "file_size": {
+                "min": 300,
+                "max": 725,
+                "algorithm": "Constant",
+                "actual": 516.96,
+                "valid": "Pass",
+                "validation_message_code": "MSG_FILE_SIZE_VALID"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "C0A05570_T1DCDCFS_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0D0GT12_T1D0BASE_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0D0GT24_T1D0BASE_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H20000_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H20060_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H20070_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H20080_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H20090_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H30080_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H40000_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 3,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H40060_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H40070_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H40080_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H40090_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 9999,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H400B0_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0L00AON_T1L0OCR1_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [
+                    {
+                        "name": "spaceFont",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_OPTIONAL_FONT_MATCHED"
+                    },
+                    {
+                        "name": "C0H30070_T1V10500_0",
+                        "type": "Type3",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_OPTIONAL_FONT_NOT_FOUND"
+                    }
+                ],
+                "additional_fonts": [],
+                "valid": "Pass",
+                "validation_message_code": "MSG_FONT_VALIDATION_VALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20220209135314-05'00'",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "Equal",
+                    "actual": "D:20220209135315-05'00'",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_DATES_VALID_TOLERANCE"
+                },
+                "valid": "Pass",
+                "validation_message_code": "MSG_VALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "Navy Federal Credit Union",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        }
+    ]
+}

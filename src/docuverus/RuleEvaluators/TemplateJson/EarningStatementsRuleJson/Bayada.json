@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Bayada"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services PDF Rendering.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 38,
+            "max": 45
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

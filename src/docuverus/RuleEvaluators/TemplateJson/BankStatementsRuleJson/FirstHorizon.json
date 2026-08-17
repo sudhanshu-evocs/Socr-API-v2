@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "First Horizon"
+        },
+        "producer": {
+            "name": "^First Tennessee Bank via ABCpdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "Current"
+        },
+        "producer": {
+            "name": "^openhtmltopdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 25,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Sohne-Buch",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Sohne-Kraftig",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Sohne-Leicht",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Data Service Center"
+        },
+        "producer": {
+            "name": "^Infoprint Server.*"
+        },
+        "creator": {
+            "name": "^IPDS \\- QPDF1.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

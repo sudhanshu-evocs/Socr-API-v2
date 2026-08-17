@@ -1,0 +1,58 @@
+[
+    {
+        "template": {
+            "name": "Fusion Employer Services"
+        },
+        "producer": {
+            "name": "^IIPDFLib.*"
+        },
+        "creator": {
+            "name": "^mvQuery 7.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Lesser"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Fusion Employer Services"
+        },
+        "producer": {
+            "name": "^IIPDFLib.*"
+        },
+        "creator": {
+            "name": "^mvQuery 7.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

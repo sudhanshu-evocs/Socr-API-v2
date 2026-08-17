@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "cPort Credit Union"
+        },
+        "producer": {
+            "name": "^Mass PDF Library iText iText Core.*"
+        },
+        "creator": {
+            "name": "^AFPPweb SDK.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 300,
+            "max": 495
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FreeSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "OpenSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

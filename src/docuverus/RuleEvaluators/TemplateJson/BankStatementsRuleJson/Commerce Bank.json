@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "Commerce Bank"
+        },
+        "producer": {
+            "name": "^PDFlib\\+PDI.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 35,
+            "max": 55
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRomanPS-BoldItalicMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Greater"
+            }
+        }
+    }
+]

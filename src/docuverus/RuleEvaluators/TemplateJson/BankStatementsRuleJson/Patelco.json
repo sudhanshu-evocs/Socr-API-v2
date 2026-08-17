@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "Patelco"
+        },
+        "producer": {
+            "name": "^Adobe PDF Library.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 840,
+            "max": 8250
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

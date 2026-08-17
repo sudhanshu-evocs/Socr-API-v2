@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Landmark Credit Union"
+        },
+        "producer": {
+            "name": "^PDFsharp.*"
+        },
+        "creator": {
+            "name": "^Quadient CXM.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

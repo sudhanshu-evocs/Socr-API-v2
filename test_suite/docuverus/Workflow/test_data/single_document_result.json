@@ -1,0 +1,131 @@
+{
+  "template_rule_set_validation_results": [
+    {
+      "template": {
+        "name": "Bank of America",
+        "actual": "Bank of America",
+        "valid": "Pass",
+        "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH",
+        "actual_confidence": 95
+      },
+      "producer": {
+        "name": "^TargetStream.*",
+        "actual": "TargetStream StreamEDS rv1.7.41 for Bank of America",
+        "valid": "Pass",
+        "validation_message_code": "MSG_PRODUCER_MATCH"
+      },
+      "creator": {
+        "name": "^Bank of America.*",
+        "actual": "Bank of America",
+        "valid": "Pass",
+        "validation_message_code": "MSG_CREATOR_MATCH"
+      },
+      "file_size": {
+        "min": 260,
+        "max": 450,
+        "algorithm": "Constant",
+        "actual": 308.695,
+        "valid": "Pass",
+        "validation_message_code": "MSG_FILE_SIZE_VALID"
+      },
+      "fonts": {
+        "required_fonts": [
+          {
+            "name": "Connections",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 1,
+            "valid": "Pass",
+            "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+          },
+          {
+            "name": "ConnectionsBold",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 1,
+            "valid": "Pass",
+            "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+          },
+          {
+            "name": "ConnectionsIta",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 1,
+            "valid": "Pass",
+            "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+          },
+          {
+            "name": "Connections_Medium",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 1,
+            "valid": "Pass",
+            "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+          },
+          {
+            "name": "HigherStandards",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 1,
+            "valid": "Pass",
+            "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+          },
+          {
+            "name": "ITC_Franklin_Gothic_Book",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 1,
+            "valid": "Pass",
+            "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+          }
+        ],
+        "optional_fonts": [
+          {
+            "name": "Connections_MediumBold",
+            "type": "Type1",
+            "encoding": "",
+            "multiplicity": 1,
+            "actual_multiplicity": 0,
+            "valid": "Pass",
+            "validation_message_code": "MSG_OPTIONAL_FONT_NOT_FOUND"
+          }
+        ],
+        "additional_fonts": [],
+        "valid": "Pass",
+        "validation_message_code": "MSG_FONT_VALIDATION_VALID"
+      },
+      "dates": {
+        "created": {
+          "state": "None",
+          "actual": "None",
+          "valid": "Pass",
+          "validation_message_code": "MSG_CREATION_DATE_NOT_FOUND"
+        },
+        "modified": {
+          "state": "None",
+          "actual": "None",
+          "valid": "Pass",
+          "validation_message_code": "MSG_MODIFICATION_DATE_NOT_FOUND"
+        },
+        "valid": "Pass",
+        "validation_message_code": "MSG_VALID_CREATION_MODIFICATION_DATES"
+      },
+      "author": {
+        "name": "",
+        "actual": "Bank of America",
+        "valid": "Pass",
+        "validation_message_code": "MSG_AUTHOR_MATCH"
+      }
+    }
+  ],
+  "final_validation_results": {
+    "valid": "Pass",
+    "validation_message_code": "MSG_VALID_FILE"
+  }
+}

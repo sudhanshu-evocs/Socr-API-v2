@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "Consumers CU_ULURO"
+        },
+        "producer": {
+            "name": "^ULURO.*"
+        },
+        "creator": {
+            "name": "^ULURO.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 975,
+            "max": 3050
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

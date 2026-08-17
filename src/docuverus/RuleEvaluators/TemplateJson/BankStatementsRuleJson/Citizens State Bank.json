@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Citizens State Bank"
+        },
+        "producer": {
+            "name": "^iTextSharp.*"
+        },
+        "creator": {
+            "name": "^Finastra.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 0,
+            "max": 110
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

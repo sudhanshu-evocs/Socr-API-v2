@@ -1,0 +1,55 @@
+[
+    {
+        "template": {
+            "name": "Fifth Third Bank"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "min": 10,
+            "max": 24
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma-Bold",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Tahoma,Italic",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

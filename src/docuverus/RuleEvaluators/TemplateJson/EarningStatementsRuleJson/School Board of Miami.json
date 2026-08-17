@@ -1,0 +1,55 @@
+[
+    {
+        "template": {
+            "name": "School Board of Miami"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 60,
+            "max": 150
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-BoldOblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

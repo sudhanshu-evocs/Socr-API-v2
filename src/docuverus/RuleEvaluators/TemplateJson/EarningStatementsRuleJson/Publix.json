@@ -1,0 +1,166 @@
+[
+    {
+        "template": {
+            "name": "Publix"
+        },
+        "producer": {
+            "name": "^PDFium.*"
+        },
+        "creator": {
+            "name": "^PDFium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "DejaVuSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "DejaVuSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Publix"
+        },
+        "producer": {
+            "name": "^iOS.*"
+        },
+        "creator": {
+            "name": "^Safari.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "LatoRegular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LatoRegular-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Publix"
+        },
+        "producer": {
+            "name": "^Kendo UI PDF Generator.*"
+        },
+        "creator": {
+            "name": "^Kendo UI PDF Generator.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "DejaVuSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "DejaVuSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Publix"
+        },
+        "producer": {
+            "name": "^Kendo UI PDF Generator.*"
+        },
+        "creator": {
+            "name": "^Kendo UI PDF Generator.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 70,
+            "max": 95
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "DejaVuSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "DejaVuSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

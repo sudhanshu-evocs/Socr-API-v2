@@ -1,0 +1,42 @@
+flowchart TD
+    Client["React client or HTTP caller"]
+
+    subgraph Runtime["Implemented socr-api-v2 runtime"]
+        ValidateRoute["Flask POST /validate_metadata\nfile + caller-supplied template"]
+        PublicAPI["api.validate_metadata"]
+        Extractor["MetadataExtractor\nPyMuPDF metadata, image flag, file size, paystub count, fonts"]
+        Rules["RuleSetFactory\n428 packaged JSON rule files\nBank Statements + Earnings Statements"]
+        Evaluators["CompositeRuleEvaluator\ntemplate, file size, producer, creator, browser override, author, fonts, dates"]
+        Detector["FraudDetector\nrule precedence and final classification"]
+        Response["JSON validation response\nPass, FDR, or Fail\nfinal_validation_results + rule-set details"]
+
+        ValidateRoute --> PublicAPI
+        PublicAPI --> Extractor
+        PublicAPI --> Rules
+        Extractor --> Evaluators
+        Rules --> Evaluators
+        Evaluators --> Detector
+        Detector --> Response
+    end
+
+    Client --> ValidateRoute
+
+    TemplateRoute["Flask GET /template_names"]
+    TemplateAPI["api.get_template_names"]
+    TemplateNames["Sorted names from packaged rule corpus"]
+    Client --> TemplateRoute --> TemplateAPI --> Rules
+    Rules --> TemplateNames
+
+    HighlightRoute["Flask POST /highlight_fonts"]
+    Highlight["PDFUtilities\nhighlight matching font spans"]
+    HighlightResponse["Highlighted PDF bytes"]
+    Client --> HighlightRoute --> Highlight --> HighlightResponse
+
+    subgraph Dormant["Present in repository, not wired into current Flask validation route"]
+        TemplateDetector["TemplateDetector\nget_template_confidences is stubbed"]
+        CompleteWorkflow["CompleteMetadataWorkflow\nnamed-template precedence + generic fallback"]
+        TemplateDetector -.-> CompleteWorkflow
+    end
+
+    classDef dormant fill:#fff4cc,stroke:#b8860b,stroke-dasharray: 5 5,color:#333;
+    class TemplateDetector,CompleteWorkflow dormant;

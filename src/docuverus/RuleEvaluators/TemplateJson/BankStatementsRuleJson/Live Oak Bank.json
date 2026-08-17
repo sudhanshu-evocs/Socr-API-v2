@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Live Oak Bank"
+        },
+        "producer": {
+            "name": "^QT.*"
+        },
+        "creator": {
+            "name": "^wkhtmltopdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ArialBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialRegular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,127 @@
+[
+    {
+        "template": {
+            "name": "MvQuery"
+        },
+        "producer": {
+            "name": "^mvQuery.*"
+        },
+        "creator": {
+            "name": "^mvQuery.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 15,
+            "max": 90
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Lucida Console",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Times New Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "MvQuery"
+        },
+        "producer": {
+            "name": "^mvQuery.*"
+        },
+        "creator": {
+            "name": "^mvQuery.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 15,
+            "max": 165
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Arial Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Arial Italic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Georgia Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Lucida Console",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "SB Font",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Tahoma Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times New Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

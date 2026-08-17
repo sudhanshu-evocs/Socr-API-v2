@@ -1,0 +1,125 @@
+[
+    {
+        "template": {
+            "name": "American Airlines"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 19,
+            "max": 35
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Airlines"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 65,
+            "max": 165
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "American Airlines"
+        },
+        "producer": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "creator": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 19,
+            "max": 35
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

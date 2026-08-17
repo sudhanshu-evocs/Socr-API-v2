@@ -1,0 +1,164 @@
+[
+    {
+        "template": {
+            "name": "Bank of America"
+        },
+        "producer": {
+            "name": "^TargetStream.*"
+        },
+        "creator": {
+            "name": "^Bank of America.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 144,
+            "max": 424
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Connections",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ConnectionsBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Connections_Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "HigherStandards",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ITC_Franklin_Gothic_Book",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "ConnectionsBoldIta",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ConnectionsIta",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ConnectionsMediumBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ITC_Franklin_Gothic_Med",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Bank of America"
+        },
+        "producer": {
+            "name": "^TargetStream StreamEDS.*"
+        },
+        "creator": {
+            "name": "^denny\\.edwards@bofa\\.com.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 200,
+            "max": 250
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Connections",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Connections_Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ConnectionsBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ConnectionsIta",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierSWM",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "HigherStandards",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ITC_Franklin_Gothic_Book",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Swiss721SWM",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

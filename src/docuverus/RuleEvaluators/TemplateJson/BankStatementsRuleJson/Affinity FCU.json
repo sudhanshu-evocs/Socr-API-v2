@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Affinity FCU"
+        },
+        "producer": {
+            "name": "^Foxit Quick PDF Library.*"
+        },
+        "creator": {
+            "name": "^BitRaster.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

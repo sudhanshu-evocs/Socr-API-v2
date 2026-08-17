@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "Misc A"
+        },
+        "producer": {
+            "name": "^DynaPDF.*"
+        },
+        "creator": {
+            "name": "^Evolution.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 0,
+            "max": 10
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

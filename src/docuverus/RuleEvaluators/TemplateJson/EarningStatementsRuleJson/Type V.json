@@ -1,0 +1,86 @@
+[
+    {
+        "template": {
+            "name": "Type V",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form ZF.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 3,
+            "max": 48
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Type V",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SAP NetWeaver.*"
+        },
+        "creator": {
+            "name": "^Form Z.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 3,
+            "max": 48
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

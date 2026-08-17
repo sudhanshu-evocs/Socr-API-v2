@@ -1,0 +1,50 @@
+[
+    {
+        "template": {
+            "name": "Express"
+        },
+        "producer": {
+            "name": "^\\[ClibPDF Library.*"
+        },
+        "creator": {
+            "name": "^IBM afp2pdf Transform.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 7,
+            "max": 16
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Courier-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

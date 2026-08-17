@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "One Pay"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Chromium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 60,
+            "max": 170
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "OpenSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "OpenSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

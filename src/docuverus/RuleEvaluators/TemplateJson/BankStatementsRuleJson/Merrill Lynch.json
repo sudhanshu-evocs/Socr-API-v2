@@ -1,0 +1,62 @@
+[
+    {
+        "template": {
+            "name": "Merrill Lynch"
+        },
+        "producer": {
+            "name": "^303v Windows.*"
+        },
+        "creator": {
+            "name": "^Merrill Lynch.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 40,
+            "max": 200
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Custom-Metrics-1",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Custom-Metrics-2",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Custom-Metrics-3",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Custom-Metrics-4",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

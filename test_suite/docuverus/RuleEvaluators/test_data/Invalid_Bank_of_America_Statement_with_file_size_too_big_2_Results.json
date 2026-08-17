@@ -1,0 +1,447 @@
+{
+        "template_rule_set_validation_results": [
+            {
+                "author": {
+                    "actual": "Bank of America",
+                    "name": "",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_AUTHOR_MATCH"
+                },
+                "creator": {
+                    "actual": "Bank of America",
+                    "name": "^Bank of America.*",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATOR_MATCH"
+                },
+                "dates": {
+                    "created": {
+                        "actual": "D:20220120231221-05'00'",
+                        "state": "None",
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_CREATION_DATE_SHOULD_BE_NONE"
+                    },
+                    "modified": {
+                        "actual": "D:20230427220100-04'00'",
+                        "state": "None",
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_MODIFICATION_DATE_SHOULD_BE_NONE"
+                    },
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+                },
+                "file_size": {
+                    "actual": 3045.462,
+                    "algorithm": "Constant",
+                    "max": 450,
+                    "min": 260,
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_FILE_SIZE_INVALID"
+                },
+                "fonts": {
+                    "additional_fonts": [
+                        {
+                            "actual_multiplicity": 32,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "Arial",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 2,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "Arial,Bold",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 14,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "Arial-BoldMT",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 56,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "ArialMT",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 1,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "Helvetica",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 11,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Bold",
+                            "type": "CIDFontType0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 15,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Bold",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 5,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Regular",
+                            "type": "CIDFontType0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 8,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Regular",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 1,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "ZapfDingbats",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        }
+                    ],
+                    "optional_fonts": [{"actual_multiplicity": 0,
+                                                                         "encoding": "",
+                                                                         "multiplicity": 1,
+                                                                         "name": "Connections_MediumBold",
+                                                                         "type": "Type1",
+                                                                         "valid": "Pass",
+                                                                         "validation_message_code": "MSG_OPTIONAL_FONT_NOT_FOUND"}],
+                    "required_fonts": [
+                        {
+                            "actual_multiplicity": 5,
+                            "encoding": "",
+                            "multiplicity": 1,
+                            "name": "Connections",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 5,
+                            "encoding": "",
+                            "multiplicity": 1,
+                            "name": "ConnectionsBold",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 3,
+                            "encoding": "",
+                            "multiplicity": 1,
+                            "name": "ConnectionsIta",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 4,
+                            "encoding": "",
+                            "multiplicity": 1,
+                            "name": "Connections_Medium",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 2,
+                            "encoding": "",
+                            "multiplicity": 1,
+                            "name": "HigherStandards",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 4,
+                            "encoding": "",
+                            "multiplicity": 1,
+                            "name": "ITC_Franklin_Gothic_Book",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        }
+                    ],
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+                },
+                "producer": {
+                    "actual": "TargetStream StreamEDS rv1.7.41 for Bank of America",
+                    "name": "^TargetStream.*",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_PRODUCER_MATCH"
+                },
+                "template": {
+                    "actual": "Bank of America",
+                    "name": "Bank of America",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH"
+                }
+            },
+            {
+                "author": {
+                    "actual": "Bank of America",
+                    "name": "",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_AUTHOR_MATCH"
+                },
+                "creator": {
+                    "actual": "Bank of America",
+                    "name": "",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_CREATOR_DOES_NOT_MATCH"
+                },
+                "dates": {
+                    "created": {
+                        "actual": "D:20220120231221-05'00'",
+                        "state": "Present",
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                    },
+                    "modified": {
+                        "actual": "D:20230427220100-04'00'",
+                        "state": "Equal",
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_DATES_INVALID_TOLERANCE"
+                    },
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+                },
+                "file_size": {
+                    "actual": 3045.462,
+                    "algorithm": "Constant",
+                    "max": 10,
+                    "min": 6,
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_FILE_SIZE_INVALID"
+                },
+                "fonts": {
+                    "additional_fonts": [
+                        {
+                            "actual_multiplicity": 32,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "Arial",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 2,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "Arial,Bold",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 14,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "Arial-BoldMT",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 56,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "ArialMT",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 5,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "Connections",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 5,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "ConnectionsBold",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 3,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "ConnectionsIta",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 4,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "Connections_Medium",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 1,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "Helvetica",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 2,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "HigherStandards",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 4,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "ITC_Franklin_Gothic_Book",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 11,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Bold",
+                            "type": "CIDFontType0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 15,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Bold",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 5,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Regular",
+                            "type": "CIDFontType0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 8,
+                            "encoding": "Identity-H",
+                            "multiplicity": 0,
+                            "name": "MinionPro-Regular",
+                            "type": "Type0",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        },
+                        {
+                            "actual_multiplicity": 1,
+                            "encoding": "",
+                            "multiplicity": 0,
+                            "name": "ZapfDingbats",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                        }
+                    ],
+                    "optional_fonts": [],
+                    "required_fonts": [
+                        {
+                            "actual_multiplicity": 0,
+                            "encoding": "WinAnsiEncoding",
+                            "multiplicity": 1,
+                            "name": "Helvetica",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 0,
+                            "encoding": "WinAnsiEncoding",
+                            "multiplicity": 1,
+                            "name": "Helvetica-Bold",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        },
+                        {
+                            "actual_multiplicity": 0,
+                            "encoding": "WinAnsiEncoding",
+                            "multiplicity": 1,
+                            "name": "Times-Roman",
+                            "type": "Type1",
+                            "valid": "Fail",
+                            "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                        }
+                    ],
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+                },
+                "producer": {
+                    "actual": "TargetStream StreamEDS rv1.7.41 for Bank of America",
+                    "name": "^iText 2.1.7 by 1T3XT.*",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_PRODUCER_DOES_NOT_MATCH"
+                },
+                "template": {
+                    "actual": "Bank of America",
+                    "name": "Bank of America",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH"
+                }
+            }
+        ],
+    "final_validation_results": {
+        "valid": "FDR",
+        "validation_message_code": "MSG_FURTHER_DOCUMENTATION_REQUIRED"
+    }
+}

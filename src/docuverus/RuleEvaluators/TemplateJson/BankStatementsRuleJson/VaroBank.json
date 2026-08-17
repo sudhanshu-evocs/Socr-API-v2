@@ -1,0 +1,41 @@
+[
+    {
+        "template": {
+            "name": "Varo Bank"
+        },
+        "producer": {
+            "name": "^Lasernet PDF Engine.*"
+        },
+        "creator": {
+            "name": "^EFS Technology, Lasernet.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Synchrony Bank"
+        },
+        "producer": {
+            "name": "^PDF.*"
+        },
+        "creator": {
+            "name": "^GMC Software AG.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

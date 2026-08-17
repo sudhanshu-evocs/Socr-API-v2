@@ -1,0 +1,115 @@
+[
+    {
+        "template": {
+            "name": "Intuit2",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Intuit2",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Etymon PJ.*"
+        },
+        "creator": {
+            "name": "^QuarkXPress.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 900,
+            "max": 915
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "D:20020726000000"
+            },
+            "modified": {
+                "state": "Present"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Intuit2",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Etymon PJ.*"
+        },
+        "creator": {
+            "name": "^Adobe Illustrator CS4.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 100,
+            "max": 110
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "D:20101015000000"
+            },
+            "modified": {
+                "state": "D:20181210000000"
+            }
+        }
+    }
+]

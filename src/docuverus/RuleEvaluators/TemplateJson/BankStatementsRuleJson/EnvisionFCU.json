@@ -1,0 +1,54 @@
+[
+    {
+        "template": {
+            "name": "Envision FCU"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^GMC Software AG.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Envision FCU"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^GMC Software AG.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

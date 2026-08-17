@@ -1,0 +1,151 @@
+[
+    {
+        "template": {
+            "name": "MRS"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 3,
+            "max": 20
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "MRS"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 190,
+            "max": 240
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "MRS"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 4,
+            "max": 25
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Verdana",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Verdana,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

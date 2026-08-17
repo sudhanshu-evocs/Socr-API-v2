@@ -1,0 +1,47 @@
+[
+    {
+        "template": {
+            "name": "Regions Bank"
+        },
+        "producer": {
+            "name": "^CrawfordTech PDF/UA Driver.*"
+        },
+        "creator": {
+            "name": "^PRO HLCAPI.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FE1",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FE2",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FE3",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

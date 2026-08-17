@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Golden1"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": "^OpenText Exstream.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Greater"
+            }
+        }
+    }
+]

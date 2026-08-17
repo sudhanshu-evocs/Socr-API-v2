@@ -1,0 +1,71 @@
+[
+    {
+        "template": {
+            "name": "Synchrony"
+        },
+        "producer": {
+            "name": "^PDF.*"
+        },
+        "creator": {
+            "name": "^GMC Software AG.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 275,
+            "max": 300
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "AllandNone",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "AllAndNone2",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Synchrony"
+        },
+        "producer": {
+            "name": "^Adobe PDF Library.*"
+        },
+        "creator": {
+            "name": "^Quadient Inspire.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 115,
+            "max": 410
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

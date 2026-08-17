@@ -1,0 +1,49 @@
+[
+    {
+        "template": {
+            "name": "Flourish Financial"
+        },
+        "producer": {
+            "name": "^Qt.*"
+        },
+        "creator": {
+            "name": "^wkhtmltopdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "DejaVuSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "DejaVuSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "DejaVuSans-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

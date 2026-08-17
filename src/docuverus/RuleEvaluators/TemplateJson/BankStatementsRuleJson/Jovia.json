@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Jovia"
+        },
+        "producer": {
+            "name": "^Maas PDF Library.*"
+        },
+        "creator": {
+            "name": "^AFP2web SDK.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 275,
+            "max": 355
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FreeSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FreeSansBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

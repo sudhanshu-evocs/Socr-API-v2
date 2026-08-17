@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "First Commonwealth"
+        },
+        "producer": {
+            "name": "^3-Heights.*"
+        },
+        "creator": {
+            "name": "^Designer*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

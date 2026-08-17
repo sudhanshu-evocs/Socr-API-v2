@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "ABCO FCU"
+        },
+        "producer": {
+            "name": "^active PDF WebGrabber.*"
+        },
+        "creator": {
+            "name": "^WebGrabber.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

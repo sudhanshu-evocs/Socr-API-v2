@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Centra Credit Union"
+        },
+        "producer": {
+            "name": "^Acrobat Distiller.*"
+        },
+        "creator": {
+            "name": "^PScript5\\.dll.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 55,
+            "max": 90
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

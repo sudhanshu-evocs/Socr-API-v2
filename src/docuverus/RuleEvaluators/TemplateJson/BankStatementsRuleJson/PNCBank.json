@@ -1,0 +1,36 @@
+[
+    {
+        "template": {
+            "name": "PNC Bank"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "min": 195,
+            "max": 230
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "MicrosoftSansSerif",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

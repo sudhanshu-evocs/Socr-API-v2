@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Bluevine"
+        },
+        "producer": {
+            "name": "^WeasyPrint.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 76,
+            "max": 99
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "DejaVu-Sans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "DejaVu-Sans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

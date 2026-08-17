@@ -1,0 +1,3465 @@
+[
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form ZPYXXFO.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^iTextSharp.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Oracle BI Publisher.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Aspose\\.Pdf for \\.NET.*"
+        },
+        "creator": {
+            "name": "^Aspose Ltd\\..*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^HiQPdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 50,
+            "max": 70
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^CoolSpools.*"
+        },
+        "creator": {
+            "name": "^CoolSpools.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Oracle XML Publisher.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^TCPDF.*"
+        },
+        "creator": {
+            "name": "^TCPDF.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ComponentOne PDF Generator.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "Present"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Select\\.Pdf for \\.NET.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Nitro PDF PrimoPDF.*"
+        },
+        "creator": {
+            "name": "^PrimoPDF http://www\\.primopdf\\.com.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PCL2PDF \\(TM\\) from Visual Software.*"
+        },
+        "creator": {
+            "name": "^ProBusiness Payroll.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 55,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial+000057",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial+000059",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial+000062",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold+000009",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold+000065",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRoman+000067",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRoman,Bold+000056",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 45
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^wPDF3.*"
+        },
+        "creator": {
+            "name": "^Wellspring Software.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Infoprint Server.*"
+        },
+        "creator": {
+            "name": "^IPDS \\- QPDF1.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Equifax Workforce Solutions.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^IIPDFLib.*"
+        },
+        "creator": {
+            "name": "^mvQuery 7.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Lesser"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ActiveReports 11.*"
+        },
+        "creator": {
+            "name": "^Accounting CS or Service Bureau Payroll CS.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form ZPYXXFO.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form YPNF_US_ESS_PAYSLIP_TO_PDF EN.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ExpertPdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 110,
+            "max": 145
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times New Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRomanPS-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRomanPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^FPDF.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 1,
+            "max": 8
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^SchoolFi.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^iTextSharp.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^2a55SAM Spool\\-a\\-Matic by Gumbo Software.*"
+        },
+        "creator": {
+            "name": "^I5/OS program.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 25
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ActiveReports.*"
+        },
+        "creator": {
+            "name": "^Accounting CS.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ActiveReports.*"
+        },
+        "creator": {
+            "name": "^Optimum Solutions Payroll.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ActiveReports.*"
+        },
+        "creator": {
+            "name": "^Service Bureau Payroll CS.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Adobe Experience Manager.*"
+        },
+        "creator": {
+            "name": "^Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Adobe XML Form Module Library.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Wellspring Software, Inc\\..*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ClibPDF Library.*"
+        },
+        "creator": {
+            "name": "^IBM afp2pdf.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ComponentOne C1Report.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ComponentOne PDF Generator.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ComponentOne PDF Generator.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^CoolSpools.*"
+        },
+        "creator": {
+            "name": "^CoolSpools.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Data Dynamics ActiveReports.*"
+        },
+        "creator": {
+            "name": "^Data Dynamics ActiveReports.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Deloitte Services LP via ABCpdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 6,
+            "max": 12
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Dynamic PDF for \\.NET.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Dynamic PDF for \\.NET.*"
+        },
+        "creator": {
+            "name": "^Paylocity.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Dynamic PDF for \\.NET.*"
+        },
+        "creator": {
+            "name": "^PSPDF.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Equifax Workforce Solutions.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^ExpertPdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Foxit Quick PDF Library.*"
+        },
+        "creator": {
+            "name": "^Foxit Quick PDF Library.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Foxit Reader PDF.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^GrapeCity ActiveReports.*"
+        },
+        "creator": {
+            "name": "^GrapeCity ActiveReports.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Infoprint Server.*"
+        },
+        "creator": {
+            "name": "^IPDS.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Kelly \\& Associates Insurance Group using ABCpdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^llPDFLib.*"
+        },
+        "creator": {
+            "name": "^Evolution.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^llPDFLib.*"
+        },
+        "creator": {
+            "name": "^RW Preview.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Mcai\\.DocumentServices\\.Common.*"
+        },
+        "creator": {
+            "name": "^XSL\\-FO.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Nuance PDF Creator.*"
+        },
+        "creator": {
+            "name": "^Intuit.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^SchoolFi.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^OpenPDF.*"
+        },
+        "creator": {
+            "name": "^SchoolFi.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Optio DCS.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Paycor, Inc\\. via ABCpdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PaySvcSol.*"
+        },
+        "creator": {
+            "name": "^PageTech or Payroll Service.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Present"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PCL2PDF.*"
+        },
+        "creator": {
+            "name": "^ProBusiness Payroll.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFlib.*"
+        },
+        "creator": {
+            "name": "^Allegheny County.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFlib.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFsharp.*"
+        },
+        "creator": {
+            "name": "^PDFsharp.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Powered by Business Objects.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Select\\.Pdf for \\.NET.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SSDT.*"
+        },
+        "creator": {
+            "name": "^NRIDGE_PE.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Transform Foundation Server.*"
+        },
+        "creator": {
+            "name": "^Transform Foundation Server.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^WeasyPrint.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Winnovative.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 70,
+            "max": 76
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^yy.*"
+        },
+        "creator": {
+            "name": "^yy.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^llPDFLib.*"
+        },
+        "creator": {
+            "name": "^RW Preview.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PaySvcSol.*"
+        },
+        "creator": {
+            "name": "^PageTech.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 12,
+            "max": 23
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFsharp.*"
+        },
+        "creator": {
+            "name": "^PDFsharp.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 8,
+            "max": 20
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFsharp.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 68,
+            "max": 75
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CourierNew",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^iText® Core.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 68,
+            "max": 125
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Customer Communications Manager.*"
+        },
+        "creator": {
+            "name": "^Customer Communications Management.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 80,
+            "max": 95
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "CenturySchoolbook",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "CenturySchoolbook-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "New",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ScriptMTBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "USPSIMBStandard",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^iText.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 35
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Apache FOP Version 0\\.95.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Skia/PDF m74.*"
+        },
+        "creator": {
+            "name": "^Mozilla/5\\.0\\.\\.\\..*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^Unicorn HRO.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Lincoln \\& Co.*"
+        },
+        "creator": {
+            "name": "^LincPDF.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Service.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Service.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Qt.*"
+        },
+        "creator": {
+            "name": "^wkhtmltopdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 24
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "ConsolasBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ConsolasRegular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^FPDF.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Lincoln \\& Co.*"
+        },
+        "creator": {
+            "name": "^LincPDF.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFsharp.*"
+        },
+        "creator": {
+            "name": "^wkhtmltopdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 50
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^RedTitan PDFOUT.*"
+        },
+        "creator": {
+            "name": "^EscapeE PCL Converter.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^WeasyPrint.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Powered by Crystal.*"
+        },
+        "creator": {
+            "name": "^Crystal Reports.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Eddy.*"
+        },
+        "creator": {
+            "name": "^Eddy.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "OpenSans-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "OpenSans-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Platform \\- None Adobe \\- JACK HENRY \\& ASSOCIATES.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFOUT\\*by Xeons, inc\\..*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing,Inc\\..*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 14,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFOUT\\*by Xeons, inc\\..*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing,Inc\\..*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 14,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing,Inc\\..*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 45
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^iTextSharp.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFium.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFium.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDF Sharp.*"
+        },
+        "creator": {
+            "name": "^PDF Sharp.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 140,
+            "max": 215
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Tahoma",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Tahoma,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^IIPDFLib.*"
+        },
+        "creator": {
+            "name": "^mvQuery 7.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form X.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 3,
+            "max": 82
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Mozilla/5\\.0.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 140,
+            "max": 180
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Verdana",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Verdana-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "No",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^PDFlib.*"
+        },
+        "creator": {
+            "name": "^SQR for Peoplesoft.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 0,
+            "max": 40
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Times-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

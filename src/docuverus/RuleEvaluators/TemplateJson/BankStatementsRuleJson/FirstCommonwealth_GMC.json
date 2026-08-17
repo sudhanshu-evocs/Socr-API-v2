@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "FirstCommonwealth_GMC"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^GMC Software AG\\-Inspire.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 100,
+            "max": 210
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

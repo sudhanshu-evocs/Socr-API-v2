@@ -1,0 +1,37 @@
+[
+    {
+        "template": {
+            "name": "Johns Hopkins"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form X.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 30,
+            "max": 45
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

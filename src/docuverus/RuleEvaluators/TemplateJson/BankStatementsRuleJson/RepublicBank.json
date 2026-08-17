@@ -1,0 +1,72 @@
+[
+    {
+        "template": {
+            "name": "Republic Bank"
+        },
+        "producer": {
+            "name": "^Quadient CXM.*"
+        },
+        "creator": {
+            "name": "^Adobe PDF Library.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 195,
+            "max": 225
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Republic Bank"
+        },
+        "producer": {
+            "name": "^OpenPDF.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 5,
+            "max": 50
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

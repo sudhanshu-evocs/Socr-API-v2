@@ -1,0 +1,440 @@
+{
+    "final_validation_results": {
+        "valid": "Fail",
+        "validation_message_code": "MSG_INVALID_FILE"
+    },
+    "template_rule_set_validation_results": [
+        {
+            "template": {
+                "name": "Capital One Bank",
+                "actual": "Capital One Bank",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH"
+            },
+            "producer": {
+                "name": "^(CrawfordTech PDF Driver.*|iText.*)",
+                "actual": "iText\u00ae 7.1.5 \u00a92000-2019 iText Group NV (CAPITAL ONE SERVICES, LLC; licensed version)",
+                "valid": "Pass",
+                "validation_message_code": "MSG_PRODUCER_MATCH"
+            },
+            "creator": {
+                "name": "^(Enterprise Imaging|$)",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_CREATOR_MATCH"
+            },
+            "file_size": {
+                "algorithm": "Unknown",
+                "actual": 253.683,
+                "valid": "NOT_APPLICABLE",
+                "validation_message_code": "MSG_VALID_FILE_SIZE_UNKNOWN"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "Optimist-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "multiplicity": 2,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "Optimist-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 2,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [],
+                "additional_fonts": [
+                    {
+                        "name": "Arial",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Helvetica",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Bold",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 12,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Regular",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ZapfDingbats",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    }
+                ],
+                "valid": "Fail",
+                "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20230601153621Z",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "Equal",
+                    "actual": "D:20230615195442-04'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_DATES_INVALID_TOLERANCE"
+                },
+                "valid": "Fail",
+                "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        },
+        {
+            "template": {
+                "name": "Capital One Bank",
+                "actual": "Capital One Bank",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH"
+            },
+            "producer": {
+                "name": "^openhtmltopdf.com.*",
+                "actual": "iText\u00ae 7.1.5 \u00a92000-2019 iText Group NV (CAPITAL ONE SERVICES, LLC; licensed version)",
+                "valid": "Fail",
+                "validation_message_code": "MSG_PRODUCER_DOES_NOT_MATCH"
+            },
+            "creator": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_CREATOR_MATCH"
+            },
+            "file_size": {
+                "algorithm": "Unknown",
+                "actual": 253.683,
+                "valid": "NOT_APPLICABLE",
+                "validation_message_code": "MSG_VALID_FILE_SIZE_UNKNOWN"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "Optimist-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "multiplicity": 2,
+                        "actual_multiplicity": 2,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "Optimist-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 2,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [],
+                "additional_fonts": [
+                    {
+                        "name": "Arial",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Helvetica",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Bold",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 12,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Regular",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ZapfDingbats",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    }
+                ],
+                "valid": "Fail",
+                "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20230601153621Z",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "None",
+                    "actual": "D:20230615195442-04'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_MODIFICATION_DATE_SHOULD_BE_NONE"
+                },
+                "valid": "Fail",
+                "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        },
+        {
+            "template": {
+                "name": "Capital One Bank",
+                "actual": "Capital One Bank",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH"
+            },
+            "producer": {
+                "name": "^openhtmltopdf.com.*",
+                "actual": "iText\u00ae 7.1.5 \u00a92000-2019 iText Group NV (CAPITAL ONE SERVICES, LLC; licensed version)",
+                "valid": "Fail",
+                "validation_message_code": "MSG_PRODUCER_DOES_NOT_MATCH"
+            },
+            "creator": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_CREATOR_MATCH"
+            },
+            "file_size": {
+                "algorithm": "Unknown",
+                "actual": 253.683,
+                "valid": "NOT_APPLICABLE",
+                "validation_message_code": "MSG_VALID_FILE_SIZE_UNKNOWN"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "MyFontBold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "multiplicity": 2,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "MyFontRegular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [],
+                "additional_fonts": [
+                    {
+                        "name": "Arial",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Helvetica",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Bold",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 12,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Regular",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MinionPro-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Optimist-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Optimist-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ZapfDingbats",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    }
+                ],
+                "valid": "Fail",
+                "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20230601153621Z",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "None",
+                    "actual": "D:20230615195442-04'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_MODIFICATION_DATE_SHOULD_BE_NONE"
+                },
+                "valid": "Fail",
+                "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        }
+    ]
+}

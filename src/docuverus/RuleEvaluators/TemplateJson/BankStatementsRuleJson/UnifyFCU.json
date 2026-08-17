@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Unify FCU"
+        },
+        "producer": {
+            "name": "^Maas PDF Library.*"
+        },
+        "creator": {
+            "name": "^AFP2web SDK.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

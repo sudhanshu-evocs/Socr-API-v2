@@ -1,0 +1,250 @@
+[
+    {
+        "template": {
+            "name": "ADPNA"
+        },
+        "producer": {
+            "name": "^PCL2PDF \\(TM\\) from Visual Software*"
+        },
+        "creator": {
+            "name": "^ProBusiness Payroll*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 55,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial+000057",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial+000059",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial+000062",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold+000009",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Arial,Bold+000065",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRoman+000067",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRoman,Bold+000056",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "ADPNA"
+        },
+        "producer": {
+            "name": "^PDFOUT.*by Xeons, inc\\.*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing,Inc\\.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 14,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "ADPNA"
+        },
+        "producer": {
+            "name": "^PDFOUT.*by Xeons, inc\\.*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing,Inc\\.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 14,
+            "max": 100
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "ADPNA"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": "^Automatic Data Processing,Inc\\..*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 20,
+            "max": 45
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Courier-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

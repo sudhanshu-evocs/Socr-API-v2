@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "SEPTA"
+        },
+        "producer": {
+            "name": "^dompdf.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 23,
+            "max": 28
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

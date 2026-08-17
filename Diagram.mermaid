@@ -1,0 +1,25 @@
+sequenceDiagram
+    autonumber
+
+    participant Core as core-api
+    participant S1 as document-type-identification
+    participant S2 as template-identification
+    participant S3 as metadata-validation
+    participant S4 as read-data
+    participant DB as Database
+
+    Core->>DB: Bootstrap document + parent/link rows
+
+    Core->>S1: file_base64
+    S1-->>Core: document_type, confidence
+
+    Core->>S2: file_base64, document_type
+    S2-->>Core: template, confidence
+
+    Core->>S3: file_base64, document_type, template
+    S3-->>Core: status, message_code, checks
+
+    Core->>S4: file_base64, document_type, template
+    S4-->>Core: status, trust_level, fields, raw_ocr, normalized_data
+
+    Core->>DB: Persist OCR + extracted business data

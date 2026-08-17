@@ -1,0 +1,62 @@
+[
+    {
+        "template": {
+            "name": "1st Bank"
+        },
+        "producer": {
+            "name": "^Style Report.*"
+        },
+        "creator": {
+            "name": "^Style Report.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 26,
+            "max": 60
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "D:20040106080349-07'00'"
+            },
+            "modified": {
+                "state": "D:20081124110235-07'00'"
+            }
+        }
+    }
+]

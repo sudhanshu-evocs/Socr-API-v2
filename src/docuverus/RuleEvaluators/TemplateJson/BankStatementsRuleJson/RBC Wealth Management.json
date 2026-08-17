@@ -1,0 +1,108 @@
+[
+    {
+        "template": {
+            "name": "RBC Wealth Management"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": "^Postedge.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 40,
+            "max": 50
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "BookmanOldStyle",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LucidaSansUnicode",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Italic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "RBC Wealth Management"
+        },
+        "producer": {
+            "name": "^PDFOUT.*"
+        },
+        "creator": {
+            "name": "^Postedge.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 545,
+            "max": 1155
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "BookmanOldStyle",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "C0EX060",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LucidaSans",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "LucidaSansUnicode",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Italic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

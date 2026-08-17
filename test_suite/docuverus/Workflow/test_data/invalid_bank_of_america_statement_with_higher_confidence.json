@@ -1,0 +1,425 @@
+{
+    "final_validation_results": {
+        "valid": "Fail",
+        "validation_message_code": "MSG_INVALID_FILE"
+    },
+    "template_rule_set_validation_results": [
+        {
+            "template": {
+                "name": "Bank of America",
+                "actual": "Bank of America",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH",
+                "actual_confidence": 93
+            },
+            "producer": {
+                "name": "^TargetStream.*",
+                "actual": "Adobe PDF library 11.00",
+                "valid": "Fail",
+                "validation_message_code": "MSG_PRODUCER_DOES_NOT_MATCH"
+            },
+            "creator": {
+                "name": "^Bank of America.*",
+                "actual": "Adobe Illustrator CC 2014 (Windows)",
+                "valid": "Fail",
+                "validation_message_code": "MSG_CREATOR_DOES_NOT_MATCH"
+            },
+            "file_size": {
+                "min": 260,
+                "max": 450,
+                "algorithm": "Constant",
+                "actual": 2373.396,
+                "valid": "Fail",
+                "validation_message_code": "MSG_FILE_SIZE_INVALID"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "Connections",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "ConnectionsBold",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "ConnectionsIta",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "Connections_Medium",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "HigherStandards",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    },
+                    {
+                        "name": "ITC_Franklin_Gothic_Book",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 1,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_REQUIRED_FONT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [
+                    {
+                        "name": "Connections_MediumBold",
+                        "type": "Type1",
+                        "encoding": "",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Pass",
+                        "validation_message_code": "MSG_OPTIONAL_FONT_NOT_FOUND"
+                    }
+                ],
+                "additional_fonts": [
+                    {
+                        "name": "Arial",
+                        "type": "TrueType",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Helvetica",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Bold",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 7,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Bold",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Regular",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 36,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Regular",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 5,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ZapfDingbats",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    }
+                ],
+                "valid": "Fail",
+                "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "None",
+                    "actual": "D:20171016071026+07'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_CREATION_DATE_SHOULD_BE_NONE"
+                },
+                "modified": {
+                    "state": "None",
+                    "actual": "D:20200926010512-04'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_MODIFICATION_DATE_SHOULD_BE_NONE"
+                },
+                "valid": "Fail",
+                "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        },
+        {
+            "template": {
+                "name": "Bank of America",
+                "actual": "Bank of America",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH"
+            },
+            "producer": {
+                "name": "^iText 2.1.7 by 1T3XT.*",
+                "actual": "Adobe PDF library 11.00",
+                "valid": "Fail",
+                "validation_message_code": "MSG_PRODUCER_DOES_NOT_MATCH"
+            },
+            "creator": {
+                "name": "",
+                "actual": "Adobe Illustrator CC 2014 (Windows)",
+                "valid": "Fail",
+                "validation_message_code": "MSG_CREATOR_DOES_NOT_MATCH"
+            },
+            "file_size": {
+                "min": 6,
+                "max": 10,
+                "algorithm": "Constant",
+                "actual": 2373.396,
+                "valid": "Fail",
+                "validation_message_code": "MSG_FILE_SIZE_INVALID"
+            },
+            "fonts": {
+                "required_fonts": [
+                    {
+                        "name": "Helvetica",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "Helvetica-Bold",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    },
+                    {
+                        "name": "Times-Roman",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "multiplicity": 1,
+                        "actual_multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_REQUIRED_FONT_NOT_MATCHED"
+                    }
+                ],
+                "optional_fonts": [],
+                "additional_fonts": [
+                    {
+                        "name": "Arial",
+                        "type": "TrueType",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Connections",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ConnectionsBold",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Connections_Medium",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "Helvetica",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "HigherStandards",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ITC_Franklin_Gothic_Book",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Bold",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Bold",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 7,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Bold",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Regular",
+                        "type": "CIDFontType0",
+                        "encoding": "",
+                        "actual_multiplicity": 2,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Regular",
+                        "type": "Type0",
+                        "encoding": "Identity-H",
+                        "actual_multiplicity": 36,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "MyriadPro-Regular",
+                        "type": "Type1",
+                        "encoding": "WinAnsiEncoding",
+                        "actual_multiplicity": 5,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    },
+                    {
+                        "name": "ZapfDingbats",
+                        "type": "Type1",
+                        "encoding": "",
+                        "actual_multiplicity": 1,
+                        "multiplicity": 0,
+                        "valid": "Fail",
+                        "validation_message_code": "MSG_FRAUD_FONT_FOUND"
+                    }
+                ],
+                "valid": "Fail",
+                "validation_message_code": "MSG_FONT_VALIDATION_INVALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20171016071026+07'00'",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "Equal",
+                    "actual": "D:20200926010512-04'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_DATES_INVALID_TOLERANCE"
+                },
+                "valid": "Fail",
+                "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        }
+    ]
+}

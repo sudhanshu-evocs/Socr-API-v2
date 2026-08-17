@@ -1,0 +1,15 @@
+1]Font Evaluator - Need to check with PyMuPDF team if we can skip prefix in fonts so on HOLD till then.
+2]Have separate repo of SOCR_Revamp
+3]Test suite and source directory should be separated
+4]Create a Binary package of code for production that passes all the tests.
+5]Build pipeline for socr production code
+
+1st April,2024
+6]Error handling in rule evaluators.
+7]Creating a interface for Rule Evaluators. - Done
+
+8] Add creator rule evaluator - Sanika
+9]Continue working on Font Evaluator where we stopped because of prefix
+10]Add Create Date and Modified Date Rule Evaluator and Compare both dates
+11]Add Author rule evaluator - Sanika
+12]For paystubs with type r,type v we need to write fonts with different rules sets in json.

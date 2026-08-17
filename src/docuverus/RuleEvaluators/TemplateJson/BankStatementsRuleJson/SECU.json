@@ -1,0 +1,110 @@
+[
+    {
+        "template": {
+            "name": "SECU"
+        },
+        "producer": {
+            "name": "^GPL Ghostscript.*"
+        },
+        "creator": {
+            "name": "^CompuSet Version.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "SECU"
+        },
+        "producer": {
+            "name": "^TargetStream.*"
+        },
+        "creator": {
+            "name": "^TargetStream.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 60,
+            "max": 170
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "SECU"
+        },
+        "producer": {
+            "name": "^TargetStream.*"
+        },
+        "creator": {
+            "name": "^TargetStream.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 185,
+            "max": 460
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Swiss721SWM",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Swiss7215SWMBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

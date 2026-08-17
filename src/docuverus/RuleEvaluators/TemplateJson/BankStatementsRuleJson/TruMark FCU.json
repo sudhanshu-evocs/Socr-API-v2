@@ -1,0 +1,82 @@
+[
+    {
+        "template": {
+            "name": "TruMark FCU"
+        },
+        "producer": {
+            "name": "^Debenu Quick PDF Library.*"
+        },
+        "creator": {
+            "name": "^Debenu Quick PDF Library.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 210,
+            "max": 460
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "TruMark FCU"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^Quadient Group AG.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "TruMark FCU"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^Quadient Group AG.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

@@ -1,0 +1,54 @@
+[
+    {
+        "template": {
+            "name": "Santander Bank"
+        },
+        "producer": {
+            "name": "^Compart MFFPDF.*"
+        },
+        "creator": {
+            "name": "^Compart Docponent API.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FrutigerLTStd-BlackCn",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FrutigerLTStd-Light",
+                    "type": "Type1",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "ArialMT",
+                    "type": "TrueType",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "Type0",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

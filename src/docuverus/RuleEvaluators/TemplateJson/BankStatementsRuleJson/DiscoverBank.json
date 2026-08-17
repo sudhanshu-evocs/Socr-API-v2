@@ -1,0 +1,130 @@
+[
+    {
+        "template": {
+            "name": "Discover Bank"
+        },
+        "producer": {
+            "name": "^Rendering Engine.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "min": 200,
+            "max": 300
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FuturaBT-Book",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-BookItalic",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-HeavyItalic",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-Medium",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "MICR",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Discover Bank"
+        },
+        "producer": {
+            "name": "^Rendering Engine.*"
+        },
+        "creator": {
+            "name": "^Vault Rendering Engine.*"
+        },
+        "file_size": {
+            "min": 200,
+            "max": 300
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FuturaBT-Book",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-BookItalic",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-HeavyItalic",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-Medium",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "Type1",
+                    "encoding": "WinAnsiEncoding",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "MICR",
+                    "type": "TrueType",
+                    "encoding": "Identity-H",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

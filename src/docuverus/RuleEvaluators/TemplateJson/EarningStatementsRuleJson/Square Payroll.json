@@ -1,0 +1,44 @@
+[
+    {
+        "template": {
+            "name": "Square Payroll",
+            "maximum_validation_level": "FDR"
+        },
+        "producer": {
+            "name": "^Skia/PDF.*"
+        },
+        "creator": {
+            "name": "^Chromium.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 23,
+            "max": 59
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "SQMarket-Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "SQMarket-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

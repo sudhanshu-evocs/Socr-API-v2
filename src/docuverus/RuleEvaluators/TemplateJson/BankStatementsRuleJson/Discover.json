@@ -1,0 +1,74 @@
+[
+    {
+        "template": {
+            "name": "Discover"
+        },
+        "producer": {
+            "name": "^Rendering Engine.*"
+        },
+        "creator": {
+            "name": "^Vault Rendering Engine.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 115,
+            "max": 310
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "FuturaBT-Book",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "FuturaBT-Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "MICR",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "FuturaBT-BookItalic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "FuturaBT-Heavy",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "FuturaBT-HeavyItalic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

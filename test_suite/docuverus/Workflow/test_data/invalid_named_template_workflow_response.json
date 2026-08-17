@@ -1,0 +1,66 @@
+{
+    "final_validation_results": {
+        "valid": "FDR",
+        "validation_message_code": "MSG_FURTHER_VERIFICATION_REQUIRED_LOW_CONFIDENCE"
+    },
+    "template_rule_set_validation_results": [
+        {
+            "template": {
+                "name": "TD Bank",
+                "actual": "TD Bank",
+                "valid": "Pass",
+                "validation_message_code": "MSG_TEMPLATE_TYPE_MATCH",
+                "actual_confidence": 85
+            },
+            "producer": {
+                "name": "^OpenText Output Transformation Engine.*",
+                "actual": "OpenText Output Transformation Engine - 16.4.50                                                     ",
+                "valid": "Pass",
+                "validation_message_code": "MSG_PRODUCER_MATCH"
+            },
+            "creator": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_CREATOR_MATCH"
+            },
+            "file_size": {
+                "min": 910,
+                "max": 990,
+                "algorithm": "Constant",
+                "actual": 942.672,
+                "valid": "Pass",
+                "validation_message_code": "MSG_FILE_SIZE_VALID"
+            },
+            "fonts": {
+                "required_fonts": [],
+                "optional_fonts": [],
+                "additional_fonts": [],
+                "valid": "Pass",
+                "validation_message_code": "MSG_FONT_VALIDATION_VALID"
+            },
+            "dates": {
+                "created": {
+                    "state": "Present",
+                    "actual": "D:20230829193231-05'00'",
+                    "valid": "Pass",
+                    "validation_message_code": "MSG_CREATION_DATE_FOUND"
+                },
+                "modified": {
+                    "state": "Equal",
+                    "actual": "D:20230839193231-05'00'",
+                    "valid": "Fail",
+                    "validation_message_code": "MSG_DATES_INVALID_TOLERANCE"
+                },
+                "valid": "Fail",
+                "validation_message_code": "MSG_INVALID_CREATION_MODIFICATION_DATES"
+            },
+            "author": {
+                "name": "",
+                "actual": "",
+                "valid": "Pass",
+                "validation_message_code": "MSG_AUTHOR_MATCH"
+            }
+        }
+    ]
+}

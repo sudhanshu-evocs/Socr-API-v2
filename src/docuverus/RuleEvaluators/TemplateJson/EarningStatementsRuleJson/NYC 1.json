@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "NYC 1"
+        },
+        "producer": {
+            "name": "^Acrobat Distiller.*"
+        },
+        "creator": {
+            "name": "^PScript5\\.dll.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 270,
+            "max": 325
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Helvetica",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "MyriadPro-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Greater"
+            }
+        }
+    }
+]

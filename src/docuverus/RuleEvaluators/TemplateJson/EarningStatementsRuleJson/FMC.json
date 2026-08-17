@@ -1,0 +1,30 @@
+[
+    {
+        "template": {
+            "name": "FMC"
+        },
+        "producer": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "creator": {
+            "name": "^Adobe LiveCycle Designer.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 950,
+            "max": 1200
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Greater"
+            }
+        }
+    }
+]

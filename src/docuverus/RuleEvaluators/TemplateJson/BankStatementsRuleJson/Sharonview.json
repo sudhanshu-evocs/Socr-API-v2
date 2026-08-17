@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Sharonview"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^HP Exstream.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

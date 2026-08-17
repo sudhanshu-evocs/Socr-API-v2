@@ -1,0 +1,72 @@
+[
+    {
+        "template": {
+            "name": "Coadvantage Resources"
+        },
+        "producer": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "creator": {
+            "name": "^Microsoft Reporting Services.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 70,
+            "max": 80
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Microsoft Sans Serif",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Coadvantage Resources"
+        },
+        "producer": {
+            "name": "^iText\u00ae Core.*"
+        },
+        "creator": {
+            "name": ""
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 70,
+            "max": 80
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Microsoft Sans Serif",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

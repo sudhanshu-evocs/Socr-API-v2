@@ -1,0 +1,43 @@
+[
+    {
+        "template": {
+            "name": "Commonwealth of PA"
+        },
+        "producer": {
+            "name": "^SAP Netweaver.*"
+        },
+        "creator": {
+            "name": "^Form ZHR_ESS_PAYSLIP_TO_PDF EN.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 10,
+            "max": 55
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Courier",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Lesser"
+            }
+        }
+    }
+]

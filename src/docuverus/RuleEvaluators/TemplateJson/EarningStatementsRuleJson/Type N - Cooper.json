@@ -1,0 +1,58 @@
+[
+    {
+        "template": {
+            "name": "Type N - Cooper"
+        },
+        "producer": {
+            "name": "^Skia/PDF*"
+        },
+        "creator": {
+            "name": "^Mozilla/5\\.0.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": 110,
+            "max": 190
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Type N - Cooper"
+        },
+        "producer": {
+            "name": "^iOS Version.*"
+        },
+        "creator": {
+            "name": "^Safari.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown",
+            "min": null,
+            "max": null
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

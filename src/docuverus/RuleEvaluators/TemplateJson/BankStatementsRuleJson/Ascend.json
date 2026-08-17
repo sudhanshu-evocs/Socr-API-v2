@@ -1,0 +1,68 @@
+[
+    {
+        "template": {
+            "name": "Ascend"
+        },
+        "producer": {
+            "name": "^IronPdf.*"
+        },
+        "creator": {
+            "name": "^IronPdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 650,
+            "max": 1290
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "MS-PGothic",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "TimesNewRomanPSMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": [
+                {
+                    "name": "Roboto-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Roboto-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Roboto-Mediom",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Roboto-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                }
+            ]
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

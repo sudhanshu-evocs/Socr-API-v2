@@ -1,0 +1,28 @@
+[
+    {
+        "template": {
+            "name": "Genesis Educational Services"
+        },
+        "producer": {
+            "name": ""
+        },
+        "creator": {
+            "name": "^SchoolFi.*"
+        },
+        "file_size": {
+            "algorithm": "Unknown"
+        },
+        "fonts": {
+            "required_fonts": [],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "None"
+            },
+            "modified": {
+                "state": "None"
+            }
+        }
+    }
+]

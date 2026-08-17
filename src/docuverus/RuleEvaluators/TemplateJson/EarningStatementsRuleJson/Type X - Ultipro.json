@@ -1,0 +1,108 @@
+[
+    {
+        "template": {
+            "name": "Type X - Ultipro"
+        },
+        "producer": {
+            "name": "^EO\\.Pdf.*"
+        },
+        "creator": {
+            "name": "^EO\\.Pdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 42,
+            "max": 150
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Arial-BoldMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    },
+    {
+        "template": {
+            "name": "Type X - Ultipro"
+        },
+        "producer": {
+            "name": "^EO\\.Pdf.*"
+        },
+        "creator": {
+            "name": "^EO\\.Pdf.*"
+        },
+        "file_size": {
+            "algorithm": "Constant",
+            "min": 42,
+            "max": 150
+        },
+        "fonts": {
+            "required_fonts": [
+                {
+                    "name": "Roboto-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Medium",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                },
+                {
+                    "name": "Roboto-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 1
+                }
+            ],
+            "optional_fonts": []
+        },
+        "dates": {
+            "created": {
+                "state": "Present"
+            },
+            "modified": {
+                "state": "Equal"
+            }
+        }
+    }
+]

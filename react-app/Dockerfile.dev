@@ -1,0 +1,16 @@
+# Development Dockerfile for React — supports hot reload via volume mount
+FROM node:20-alpine
+WORKDIR /app
+
+# Install dependencies first (cached layer)
+COPY package.json ./
+RUN npm install --no-package-lock
+
+# Source is mounted as a volume at runtime — no COPY needed
+ENV CI=false
+ENV DISABLE_ESLINT_PLUGIN=true
+ENV CHOKIDAR_USEPOLLING=true
+ENV WATCHPACK_POLLING=true
+
+EXPOSE 3000
+CMD ["npm", "start"]

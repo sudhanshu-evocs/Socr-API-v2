@@ -4,10 +4,10 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "docuverus"
-version = "0.3.0"
+version = "0.3.4"
 description = "DocuVerus document metadata validation library"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 dependencies = [
     "PyMuPDF==1.26.7",
     "pydantic==2.12.5",

@@ -4,13 +4,15 @@
             "name": "Ally"
         },
         "producer": {
-            "name": ""
+            "name": "^FailProducer.*"
         },
         "creator": {
             "name": "^OpenText Exstream.*"
         },
         "file_size": {
-            "algorithm": "Unknown"
+            "algorithm": "Constant",
+            "min": 10,
+            "max": 50
         },
         "fonts": {
             "required_fonts": [

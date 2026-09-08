@@ -36,9 +36,11 @@ The repository does not currently implement database persistence, OCR/read-data 
 `react-app/src/App.js` is a manual validation UI. It:
 
 1. Loads template names from `GET http://localhost:5000/template_names`.
-2. Sends the selected PDF and caller-selected template to `POST /validate_metadata`.
-3. Displays the returned JSON.
-4. Can send a selected font to `POST /highlight_fonts` to receive a highlighted PDF byte response.
+2. Sends the PDF to `POST /detect_template` and auto-selects the strongest distinct template/category fingerprint.
+3. Keeps manual selection available when detection confidence is insufficient or ambiguous.
+4. Sends the selected PDF and resolved template to `POST /validate_metadata`.
+5. Displays the returned JSON.
+6. Can send a selected font to `POST /highlight_fonts` to receive a highlighted PDF byte response.
 
 `react-app/src/components/FileUpload.js` is an older upload component that targets `/upload`, a route not implemented by the Flask service and not used by the current `App` component.
 
@@ -55,7 +57,11 @@ Expected multipart fields:
 
 The route validates that both fields exist and that a filename was supplied. It delegates to `docuverus.api.validate_metadata(file_bytes, template_name)` and returns the resulting dictionary as JSON with HTTP 200. Missing file/template inputs return HTTP 400 with an error message.
 
-The caller supplies the template. The route does not call `TemplateDetector`, infer a document type, or select a template automatically.
+The caller still supplies the final template used for validation. The React client normally obtains that value from `/detect_template`, but users can confirm or override it manually.
+
+### `POST /detect_template`
+
+Accepts an uploaded PDF and ranks known template variants using producer, creator, normalized font coverage, file size, and a small filename hint. It returns the leading template, document category/class, an uncalibrated fingerprint confidence, the confidence margin, matched signals, and the top candidates. Automatic selection requires both a minimum score and a distinct lead over the second candidate; ambiguous results remain manual-review selections.
 
 ### `GET /template_names`
 
@@ -204,7 +210,6 @@ Nested rule results normally include expected rule values, actual extracted valu
 
 ### Present but not wired into the Flask route
 
-- `TemplateDetector.get_template_confidences` is a stub with no implementation.
 - `CompleteMetadataWorkflow` coordinates named-template results and a generic fallback. Its precedence is pass first, then FDR, then fail, then generic validation.
 - `MultiTemplateFraudDetector` can run a detector for multiple template-confidence candidates, but it is not called by `api.validate_metadata`.
 - `NamedTemplateFraudDetectorFactory` exists but creates a `FraudDetector` with `None` dependencies and is not used by the public route.
@@ -226,26 +231,25 @@ These are maintenance/build workflows and are not invoked by the running Flask s
 
 | Area | Current repository behavior | Diagram implication |
 |---|---|---|
-| Entry point | Flask routes in `app.py`; template is supplied by the caller | Diagram starts with a broader core workflow and does not show the actual Flask route |
+| Entry point | Flask routes in `app.py`; the UI detects a candidate before supplying the final template to validation | Diagram starts with a broader core workflow and does not show the actual Flask route |
 | Document type | No document-type service or classifier in this repository | Diagram shows document-type identification as a separate service |
-| Template identification | `TemplateDetector` is stubbed; current validation uses the supplied template | Diagram shows automatic template identification and confidence flow |
+| Template identification | Metadata-fingerprint detection is exposed through `/detect_template`; ambiguous results require manual confirmation | Diagram shows a broader automatic template-identification and confidence flow |
 | Metadata | PyMuPDF extracts PDF metadata, fonts, file size, image-only status, and paystub count | Diagram’s metadata loop is directionally related but omits the concrete extractor |
 | Validation | Rule JSON is loaded locally and evaluated by a composite evaluator and `FraudDetector` | Diagram shows the comparator loop but not the current class boundaries or result precedence |
 | Browser printed | Producer/creator prefixes, font checks, file-size checks, and FDR outcomes are implemented | Diagram’s browser-printed branch is broadly consistent but should show the actual rule interaction |
 | Database | No database client, bootstrap, or persistence code is present | Diagram’s database persistence is unsupported by this repository |
 | OCR/read-data | No OCR or business-data extraction service is present | Diagram’s read-data stage is external or future-state, not current code |
-| Frontend | React client calls template listing, validation, and font highlighting endpoints | Diagram omits the client and font-highlighting side path |
+| Frontend | React client calls template listing, auto-detection, validation, and font highlighting endpoints | Diagram omits the client and font-highlighting side path |
 | Image PDFs | Image-only PDFs are returned as invalid image documents | This outcome should be explicit in the updated validation flow |
 
 ## Recommendations for updating the source diagram
 
 1. Label the diagram with a version/date and a legend distinguishing “implemented in `socr-api-v2`” from “external or future-state.”
 2. Replace the current core-service sequence with the actual HTTP path: client → Flask route → `api.validate_metadata` → `MetadataExtractor` → `RuleSetFactory`/rule JSON → composite evaluators → `FraudDetector` → JSON response.
-3. Show that the template is caller-supplied today. Put automatic template detection and confidence scoring in a dashed, future-state section until `TemplateDetector` is implemented and wired into the route.
+3. Show `/detect_template` as an assisted-selection step before `/validate_metadata`, with manual confirmation for ambiguous results. Keep OCR/layout/ML template recognition in a dashed future-state section.
 4. Add the concrete extraction outputs: PDF metadata, image-only flag, file size, paystub count, and fonts.
 5. Show rule-set evaluation as a local rule-corpus operation, including producer/creator, browser-printed override, file size, fonts, dates, and final state precedence.
 6. Add explicit terminal outcomes: `Pass`, `Fail`, and `FDR` with representative message-code categories for invalid PDFs, image PDFs, browser-printed documents, unknown templates, further documentation, and save-as/date overrides.
 7. Show `/template_names` and `/highlight_fonts` as side endpoints rather than implying they are part of validation.
 8. Remove database, OCR/read-data, and document-type-service steps from the implemented path, or label them clearly as external integrations/future architecture.
 9. Preserve the diagram’s useful domain notes about browser-printed documents and font extraction, but mark them as policy/rule notes instead of mixing them into the executable control flow.
-

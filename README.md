@@ -11,7 +11,17 @@ SOCR Revamp
 
 ## Building the Python package
 
-The package metadata and build configuration are defined in `pyproject.toml`. Use Python 3.12 or newer:
+The package metadata and build configuration are defined in `pyproject.toml`. Use Python 3.11 or newer:
+
+For the purpose of packaging, versioning rules, vendor installation, offline deployment, and the complete release checklist, see [PACKAGE_GENERATION.md](PACKAGE_GENERATION.md).
+
+The recommended verified build command is:
+
+```bash
+python scripts/build_package.py
+```
+
+To build manually:
 
 ```bash
 python -m pip install --upgrade build
@@ -26,13 +36,13 @@ This creates the distributable artifacts in `dist/`:
 To install the compiled Wheel package locally from `dist/`:
 
 ```powershell
-pip install dist/docuverus-0.3.0-py3-none-any.whl
+pip install dist/docuverus-0.3.3-py3-none-any.whl
 ```
 
 To install the source tarball archive:
 
 ```powershell
-pip install dist/docuverus-0.3.0.tar.gz
+pip install dist/docuverus-0.3.3.tar.gz
 ```
 
 To install the project in editable mode during development:
@@ -48,6 +58,32 @@ Run pytest from the repository root:
 ```bash
 pytest
 ```
+
+## Local experimental SIFT comparison
+
+The temporary OpenCV SIFT visual-template experiment lives under `experimental/sift_comparison` and is excluded from the `docuverus` package. SOCR remains authoritative; SIFT never changes `Pass`, `FDR`, or `Fail`.
+
+To enable it for the local React/Flask development launcher:
+
+```powershell
+.\start.ps1 -EnableSift
+```
+
+The equivalent environment-variable form is `$env:ENABLE_SIFT_COMPARISON = "true"` followed by `.\start.ps1`. Restart an already-running backend after enabling the experiment; the SIFT routes are registered only at process startup.
+
+If Docker Compose owns port 5000, enable the experiment with the local-only overlay:
+
+```powershell
+docker compose -f docker-compose.yml -f docker-compose.sift.yml up -d --build api
+```
+
+Register a known-good baseline separately before testing another document:
+
+```powershell
+python -m experimental.sift_comparison.register_baseline --template "Chase Bank" --document-type bank_statement --file "C:\path\known_good_chase.pdf"
+```
+
+Registration refuses to overwrite an existing reference. See `experimental/sift_comparison/README.md` for mappings, scoring, and removal instructions. With the feature flag absent or false, the original backend command is used and the SIFT tab is hidden.
 
 # Contribute
 Keep this file up to date if you change how things work.

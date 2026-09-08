@@ -44,6 +44,28 @@ class FlaskAppTests(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(json.loads(response.data.decode("utf-8")), expected_return_value)
 
+    @patch("docuverus.app.api.detect_template")
+    def test_detect_template_delegates_to_public_api(self, mock_detect_template):
+        expected_return_value = {
+            "auto_select": True,
+            "template_name": "Ally",
+            "category": "Bank Statements",
+            "document_class": "Bank Statement",
+            "confidence": 63,
+        }
+        mock_detect_template.return_value = expected_return_value
+        file_bytes = b"pdf contents"
+
+        response = self.app.post(
+            "/detect_template",
+            data={"file": (io.BytesIO(file_bytes), "ally.pdf")},
+            content_type="multipart/form-data",
+        )
+
+        mock_detect_template.assert_called_once_with(file_bytes, "ally.pdf")
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(json.loads(response.data.decode("utf-8")), expected_return_value)
+
     def test_validate_metadata_successfully_returns_analysis_with_real_fraud_detector(self):
         expected_return_value = {"final_validation_results": {"valid": "Pass", "validation_message_code": "MSG_VALID_FILE"}}
 

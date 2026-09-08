@@ -4,6 +4,7 @@ from docuverus.FraudDetector.FraudDetector import FraudDetector
 from docuverus.FraudDetector.MetadataExtractor import MetadataExtractor
 from docuverus.RuleEvaluators.CompositeRuleEvaluator import CompositeRuleEvaluatorFactory
 from docuverus.RuleEvaluators.RuleSetFactory import RuleSetFactory
+from docuverus.TemplateDetector.TemplateDetector import TemplateDetector
 
 RULE_PACKAGES = [
     "docuverus.RuleEvaluators.TemplateJson.BankStatementsRuleJson",
@@ -31,3 +32,8 @@ def get_template_categories(rule_packages: Iterable[str] | None = None) -> dict[
     rule_set_factory = create_rule_set_factory(rule_packages)
     return rule_set_factory.get_template_categories()
 
+
+def detect_template(pdf_bytes: bytes, filename: str = "", rule_packages: Iterable[str] | None = None) -> dict:
+    rule_set_factory = create_rule_set_factory(rule_packages)
+    detector = TemplateDetector(rule_set_factory=rule_set_factory)
+    return detector.detect(pdf_bytes, filename)

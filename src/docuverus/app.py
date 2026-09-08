@@ -85,6 +85,29 @@ SWAGGER_UI_HTML = """
                 }
               }
             },
+            "/detect_template": {
+              post: {
+                summary: "Detect Document Template",
+                description: "Suggests a template and document class from the PDF metadata fingerprint",
+                requestBody: {
+                  content: {
+                    "multipart/form-data": {
+                      schema: {
+                        type: "object",
+                        properties: {
+                          file: { type: "string", format: "binary", description: "PDF document file" }
+                        },
+                        required: ["file"]
+                      }
+                    }
+                  }
+                },
+                responses: {
+                  "200": { description: "Ranked template detection result" },
+                  "400": { description: "Missing PDF file" }
+                }
+              }
+            },
             "/highlight_fonts": {
               post: {
                 summary: "Highlight PDF Fonts",
@@ -144,6 +167,20 @@ def upload_file():
     return jsonify(api.validate_metadata(file.stream.read(), template_name)), 200
 
 
+@app.route("/detect_template", methods=["POST"])
+def detect_template():
+    if "file" not in request.files:
+        return jsonify({"error": "No file part"}), 400
+    file = request.files["file"]
+    if file.filename == "":
+        return jsonify({"error": "No given file"}), 400
+
+    try:
+        return jsonify(api.detect_template(file.stream.read(), file.filename)), 200
+    except Exception:
+        return jsonify({"error": "Template detection could not read this PDF"}), 422
+
+
 @app.route("/template_names", methods=["GET"])
 def template_names():
     return jsonify(api.get_template_names()), 200
@@ -181,5 +218,4 @@ if __name__ == "__main__":
             app.run(host="0.0.0.0", port=5000)
     else:
         app.run(host="0.0.0.0", port=5000)
-
 

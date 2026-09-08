@@ -9,10 +9,13 @@ class RuleSetFactory:
 
     def __init__(self, rule_set_packages):
         self.raw_rules_files = []
+        self.rule_sources = []
         for rule_set_package in rule_set_packages:
+            category = "Paystubs & Earnings" if "EarningStatements" in rule_set_package else "Bank Statements"
             for file in importlib.resources.files(rule_set_package).iterdir():
                 if file.is_file() and file.name.endswith(".json"):
                     self.raw_rules_files.append(file)
+                    self.rule_sources.append((file, category))
 
     def get_template_rules(self, template_name):
         rules = []
@@ -51,6 +54,13 @@ class RuleSetFactory:
             "Bank Statements": sorted(list(categories["Bank Statements"])),
             "Paystubs & Earnings": sorted(list(categories["Paystubs & Earnings"]))
         }
+
+    def get_all_template_rules_with_categories(self):
+        rules_with_categories = []
+        for rule_file, category in self.rule_sources:
+            for rule in json.load(rule_file.open()):
+                rules_with_categories.append({"rule": rule, "category": category})
+        return rules_with_categories
 
     def create_empty_rule_set(self, template_name):
         return {

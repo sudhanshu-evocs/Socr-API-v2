@@ -1,0 +1,13 @@
+{
+  "name": "socr-api-v2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently --names \"BACKEND,FRONTEND\" --prefix-colors \"blue,green\" \"npm run backend\" \"npm run frontend\"",
+    "backend": "cd .. && python src/docuverus/app.py",
+    "frontend": "cd react-app && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}

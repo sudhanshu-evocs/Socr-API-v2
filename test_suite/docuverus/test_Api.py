@@ -2,7 +2,7 @@ import importlib.resources
 import json
 from unittest.mock import MagicMock, patch
 
-from docuverus import get_template_names, validate_metadata
+from docuverus import detect_template, get_template_names, validate_metadata
 from docuverus.RuleEvaluators.RuleSetFactory import RuleSetFactory
 
 
@@ -35,6 +35,19 @@ def test_get_template_names_returns_sorted_names():
 
     assert template_names == sorted(template_names)
     assert "Bank of America" in template_names
+
+
+def test_detect_template_auto_selects_ally_bank_statement():
+    file_path = "../test_documents/Valid_Ally_Bank_Statement.pdf"
+    file_bytes = open(file_path, "rb").read()
+
+    result = detect_template(file_bytes, "Valid_Ally_Bank_Statement.pdf")
+
+    assert result["auto_select"] is True
+    assert result["template_name"] == "Ally"
+    assert result["category"] == "Bank Statements"
+    assert result["document_class"] == "Bank Statement"
+    assert result["confidence"] >= 60
 
 
 def test_validate_metadata_returns_fdr_for_possible_save_as_scenario():

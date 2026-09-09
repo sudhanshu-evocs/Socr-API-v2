@@ -1,18 +1,29 @@
-# Stage 1: Build React App
+# ─── Stage 1: Build ───────────────────────────────────────────────────────────
 FROM node:20-alpine AS builder
 WORKDIR /app
-COPY package.json ./
-RUN npm install --no-package-lock
+
+# Install dependencies (cached layer — only re-runs if package.json changes)
+COPY package.json package-lock.json* ./
+RUN npm ci --legacy-peer-deps
+
+# Copy source and build optimised production bundle (no source maps)
 COPY . .
 ENV CI=false
 ENV DISABLE_ESLINT_PLUGIN=true
 ENV GENERATE_SOURCEMAP=false
 RUN npm run build
 
-# Stage 2: Serve Production Build
-FROM node:20-alpine
-WORKDIR /app
-RUN npm install -g serve
-COPY --from=builder /app/build ./build
-EXPOSE 3000
-CMD ["serve", "-s", "build", "-l", "3000"]
+# ─── Stage 2: Serve with Nginx ────────────────────────────────────────────────
+FROM nginx:1.27-alpine AS production
+
+# Remove default nginx static assets
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy React production build from builder stage
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# Copy custom Nginx config for SPA (React Router) fallback
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

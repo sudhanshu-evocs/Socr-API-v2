@@ -1,5 +1,7 @@
+import logging
 import os
 import sys
+import time
 
 # Add parent 'src' directory to sys.path so 'docuverus' package resolves automatically
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -10,10 +12,22 @@ from flask_cors import CORS
 from docuverus.Utils.PDFUtilities import PDFUtilities
 from docuverus import api
 
+_log = logging.getLogger("API")
+
 app = Flask(__name__)
 CORS(app)
+app.config["MAX_CONTENT_LENGTH"] = 50 * 1024 * 1024  # 50 MB upload limit
 UPLOAD_FOLDER = "uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+
+ALLOWED_MIME_TYPES = {"application/pdf", "application/octet-stream"}
+
+
+def _is_valid_pdf(file) -> bool:
+    """Return True if the uploaded file starts with the PDF magic bytes %PDF."""
+    header = file.stream.read(4)
+    file.stream.seek(0)  # Reset stream so it can be read again downstream
+    return header == b"%PDF"
 
 SWAGGER_UI_HTML = """
 <!DOCTYPE html>
@@ -162,9 +176,25 @@ def upload_file():
     file = request.files["file"]
     if file.filename == "":
         return jsonify({"error": "No given file"}), 400
+    if not _is_valid_pdf(file):
+        return jsonify({"error": "Only PDF files are accepted"}), 400
 
     template_name = request.values["template"]
-    return jsonify(api.validate_metadata(file.stream.read(), template_name)), 200
+    file_bytes = file.stream.read()
+    file_size_kb = round(len(file_bytes) / 1024, 1)
+    _log.info("POST /validate_metadata — template='%s' size=%sKB ip=%s",
+              template_name, file_size_kb, request.remote_addr)
+    t_start = time.perf_counter()
+    try:
+        result = api.validate_metadata(file_bytes, template_name)
+        verdict = result.get("final_validation_results", {}).get("valid", "?")
+        duration = round(time.perf_counter() - t_start, 3)
+        _log.info("Response 200 — verdict=%s duration=%ss", verdict, duration)
+        return jsonify(result), 200
+    except Exception as e:
+        duration = round(time.perf_counter() - t_start, 3)
+        _log.error("Response 500 — error=%s duration=%ss", e, duration)
+        return jsonify({"error": "Failed to process the document"}), 500
 
 
 @app.route("/detect_template", methods=["POST"])
@@ -175,9 +205,21 @@ def detect_template():
     if file.filename == "":
         return jsonify({"error": "No given file"}), 400
 
+    file_bytes = file.stream.read()
+    file_size_kb = round(len(file_bytes) / 1024, 1)
+    _log.info("POST /detect_template — filename='%s' size=%sKB ip=%s",
+              file.filename, file_size_kb, request.remote_addr)
+    t_start = time.perf_counter()
     try:
-        return jsonify(api.detect_template(file.stream.read(), file.filename)), 200
+        result = api.detect_template(file_bytes, file.filename)
+        detected = result.get("template_name", "?")
+        confidence = result.get("confidence", "?")
+        duration = round(time.perf_counter() - t_start, 3)
+        _log.info("Response 200 — detected='%s' confidence=%s duration=%ss", detected, confidence, duration)
+        return jsonify(result), 200
     except Exception:
+        duration = round(time.perf_counter() - t_start, 3)
+        _log.error("Response 422 — template detection failed duration=%ss", duration)
         return jsonify({"error": "Template detection could not read this PDF"}), 422
 
 
@@ -194,12 +236,16 @@ def template_categories():
 
 @app.route("/highlight_fonts", methods=["POST"])
 def highlight_fonts():
-    return (
-        PDFUtilities.highlight_usages_of_fonts_in_byte_representation_of_pdf(
+    if "file" not in request.files or "fonts" not in request.values:
+        return jsonify({"error": "Missing file or fonts parameter"}), 400
+    try:
+        result = PDFUtilities.highlight_usages_of_fonts_in_byte_representation_of_pdf(
             request.files["file"].stream.read(), request.values["fonts"], (1, 0, 0)
-        ),
-        200,
-    )
+        )
+        return result, 200
+    except Exception as e:
+        app.logger.error(f"Error in highlight_fonts: {e}")
+        return jsonify({"error": "Failed to highlight fonts in the document"}), 500
 
 
 @app.route("/api", methods=["GET"])

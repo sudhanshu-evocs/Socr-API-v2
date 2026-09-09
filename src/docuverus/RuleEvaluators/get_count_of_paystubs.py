@@ -1,3 +1,4 @@
+import logging
 import re
 
 import fitz  # PyMuPDF
@@ -9,7 +10,7 @@ def count_paystubs(file_content):
         pdf_document = fitz.open(stream=file_content)
         return count_paystubs_by_pdf_document(pdf_document)
     except Exception as error:
-        print(error)
+        logging.error(f"Error counting paystubs: {error}")
 
 
 def count_paystubs_by_pdf_document(pdf_document):
@@ -72,4 +73,4 @@ def check_image_pdf(pdf_document):
         else:
             return False
     except Exception as error:
-        print(error)
+        logging.error(f"Error checking image PDF: {error}")

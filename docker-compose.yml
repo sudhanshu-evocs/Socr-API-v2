@@ -8,8 +8,11 @@ services:
       - "5000:5000"
     environment:
       - PYTHONPATH=/app/src
+      - LOG_LEVEL=INFO
+      - LOG_DIR=/app/logs
     volumes:
       - ./src:/app/src
+      - ./logs:/app/logs
     dns:
       - 8.8.8.8
       - 8.8.4.4

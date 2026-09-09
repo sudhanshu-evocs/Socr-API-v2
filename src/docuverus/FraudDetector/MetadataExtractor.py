@@ -1,3 +1,4 @@
+import logging
 import fitz
 from lxml import etree
 
@@ -16,7 +17,9 @@ class MetadataExtractor:
         try:
             pdf_document = fitz.open(stream=file_reader, filetype="pdf")
         except Exception as e:
+            logging.error(f"Failed to open PDF: {e}")
             metadata["exception"] = True
+            return metadata
         metadata = pdf_document.metadata
         if self.is_image_only_pdf(pdf_document):
             metadata["image_file"] = True
@@ -47,7 +50,7 @@ class MetadataExtractor:
         return self.parse_xml_metadata(xml_metadata, namespaces)
 
     def parse_xml_metadata(self, xml_metadata, namespaces):
-        print(xml_metadata)
+        logging.debug(f"XML metadata: {xml_metadata}")
         xml_tree = etree.fromstring(xml_metadata)
         xml_element = xml_tree.xpath("//pdf:Producer", namespaces=namespaces)
         if xml_element:

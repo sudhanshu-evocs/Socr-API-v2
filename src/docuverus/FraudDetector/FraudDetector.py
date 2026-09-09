@@ -10,11 +10,34 @@ from docuverus.Utils.JSONUtilities import all_valid_not_fail
 from docuverus.Utils.Messages import MessageCode, ValidStates
 from docuverus.Utils.TemplateNameUtilities import normalize_template_name
 
-logging.basicConfig(
-    filename="app.log",
-    level=logging.DEBUG,
-    format="%(asctime)s - %(levelname)s - %(message)s",
-)
+import logging.handlers
+import os
+
+_log_level = getattr(logging, os.environ.get("LOG_LEVEL", "INFO").upper(), logging.INFO)
+_log_format = "%(asctime)s [%(levelname)s] %(name)s — %(message)s"
+_date_format = "%Y-%m-%d %H:%M:%S"
+
+# Root logger
+_logger = logging.getLogger()
+_logger.setLevel(_log_level)
+
+if not _logger.handlers:
+    # Console handler — always on
+    _console = logging.StreamHandler()
+    _console.setFormatter(logging.Formatter(_log_format, datefmt=_date_format))
+    _logger.addHandler(_console)
+
+    # Rotating file handler — max 10 MB, keep 5 backups
+    _log_dir = os.environ.get("LOG_DIR", ".")
+    os.makedirs(_log_dir, exist_ok=True)
+    _file = logging.handlers.RotatingFileHandler(
+        os.path.join(_log_dir, "app.log"),
+        maxBytes=10 * 1024 * 1024,  # 10 MB
+        backupCount=5,
+        encoding="utf-8",
+    )
+    _file.setFormatter(logging.Formatter(_log_format, datefmt=_date_format))
+    _logger.addHandler(_file)
 
 
 class FraudDetector:
@@ -31,6 +54,8 @@ class FraudDetector:
         _na_valid_state: 1,
         ValidStates.STATE_FAIL: 2,
     }
+
+    _log = logging.getLogger("FraudDetector")
 
     def __init__(
         self,
@@ -50,41 +75,61 @@ class FraudDetector:
         self.date_override_rule = DateOverrideRule()
 
     def get_document_validations_for_metadata(self, metadata):
+        self._log.info("── Validation START — template='%s'", self.template_type)
+
         if "exception" in metadata:
+            self._log.error("Invalid or unreadable PDF — returning FAIL")
             return self.create_validation_results_dictionary()
 
         if metadata.get("image_file", False):
+            self._log.warning("Image-only PDF detected — metadata not applicable")
             return self._build_image_result(metadata)
 
+        self._log.debug(
+            "Metadata extracted — producer='%s' creator='%s' fonts=%d filesize=%sKB",
+            metadata.get("producer", ""),
+            metadata.get("creator", ""),
+            len(metadata.get("fonts", [])),
+            metadata.get("file_size_kb", "?"),
+        )
+
         rule_sets, unknown_template_flag = self._load_rule_sets()
+        self._log.info("Loaded %d rule set(s) for template='%s'", len(rule_sets), self.template_type)
         self._evaluate_rule_sets(rule_sets, metadata)
 
         passing_rule_set = self._find_passing_rule_set(rule_sets)
         if passing_rule_set is not None:
+            self._log.info("✅ PASS — template='%s' matched a rule set", self.template_type)
             return self._build_success_result(passing_rule_set)
 
         date_override_rule_set = self._find_date_override_rule_set(rule_sets, metadata)
         if date_override_rule_set is not None:
+            self._log.warning("⚠️ FDR — possible Save-As / modification scenario for template='%s'", self.template_type)
             return self._build_date_override_result(date_override_rule_set)
 
         if unknown_template_flag:
+            self._log.warning("⚠️ FDR — unknown template='%s', no rule set found", self.template_type)
             return self._build_unknown_template_result(rule_sets)
 
         if self._has_browser_printed_rule_set(rule_sets):
+            self._log.warning("⚠️ FDR — browser-printed document detected for template='%s'", self.template_type)
             return self._build_failure_result(rule_sets)
 
         if InvalidProducerCreatorDetector.is_invalid_metadata(metadata):
+            self._log.error("❌ FAIL — invalid producer/creator metadata for template='%s'", self.template_type)
             return self._build_invalid_result(rule_sets)
 
+        self._log.warning("⚠️ FDR — no rule set matched for template='%s'", self.template_type)
         return self._build_unknown_result(rule_sets)
 
     def get_document_validations(self, file_path):
         try:
             file_content = open(file_path, "rb")
-            logging.info(f"Validating document: {file_path}")
+            self._log.info("Validating document from file: %s", file_path)
             metadata = MetadataExtractor().extract_metadata(io.BytesIO(file_content.read()), self.template_type)
             return self.get_document_validations_for_metadata(metadata)
         except Exception as e:
+            self._log.error("Failed to validate document '%s': %s", file_path, e)
             return self.create_validation_results_dictionary()
 
     def create_validation_results_dictionary(self, valid_state=ValidStates.STATE_FAIL, message_code=MessageCode.MSG_INVALID_PDF_FILE):

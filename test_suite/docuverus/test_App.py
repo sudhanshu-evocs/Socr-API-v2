@@ -36,7 +36,7 @@ class FlaskAppTests(unittest.TestCase):
         expected_return_value = {"final_validation_results": {"valid": "Pass", "validation_message_code": "MSG_VALID_FILE"}}
         mock_validate_metadata.return_value = expected_return_value
 
-        file_bytes = b"my file contents"
+        file_bytes = b"%PDF-my file contents"
         data = {"file": (io.BytesIO(file_bytes), "test_file.txt"), "template": "bank of america"}
         response = self.app.post("/validate_metadata", data=data, content_type="multipart/form-data")
 
@@ -99,7 +99,7 @@ class FlaskAppTests(unittest.TestCase):
         }
         mock_validate_metadata.return_value = expected_return_value
 
-        file_bytes = b"my file contents"
+        file_bytes = b"%PDF-my file contents"
         data = {"file": (io.BytesIO(file_bytes), "test_file.txt"), "template": "Completely Unknown Template Type"}
         response = self.app.post("/validate_metadata", data=data, content_type="multipart/form-data")
 

@@ -1,4 +1,5 @@
 import argparse
+import logging
 import sys
 import tempfile
 from pathlib import Path
@@ -100,7 +101,7 @@ class PDFUtilities:
                                 highlight.set_colors(stroke=color)
                                 highlight.update()
 
-        print(output_pdf_path)
+        logging.debug(f"Saved highlighted PDF to: {output_pdf_path}")
         doc.save(output_pdf_path)
 
     @staticmethod

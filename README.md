@@ -59,31 +59,6 @@ Run pytest from the repository root:
 pytest
 ```
 
-## Local experimental SIFT comparison
-
-The temporary OpenCV SIFT visual-template experiment lives under `experimental/sift_comparison` and is excluded from the `docuverus` package. SOCR remains authoritative; SIFT never changes `Pass`, `FDR`, or `Fail`.
-
-To enable it for the local React/Flask development launcher:
-
-```powershell
-.\start.ps1 -EnableSift
-```
-
-The equivalent environment-variable form is `$env:ENABLE_SIFT_COMPARISON = "true"` followed by `.\start.ps1`. Restart an already-running backend after enabling the experiment; the SIFT routes are registered only at process startup.
-
-If Docker Compose owns port 5000, enable the experiment with the local-only overlay:
-
-```powershell
-docker compose -f docker-compose.yml -f docker-compose.sift.yml up -d --build api
-```
-
-Register a known-good baseline separately before testing another document:
-
-```powershell
-python -m experimental.sift_comparison.register_baseline --template "Chase Bank" --document-type bank_statement --file "C:\path\known_good_chase.pdf"
-```
-
-Registration refuses to overwrite an existing reference. See `experimental/sift_comparison/README.md` for mappings, scoring, and removal instructions. With the feature flag absent or false, the original backend command is used and the SIFT tab is hidden.
 
 # Contribute
 Keep this file up to date if you change how things work.

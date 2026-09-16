@@ -2,12 +2,9 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 
-# Install dependencies (cached layer — only re-runs if package.json changes)
-COPY package.json package-lock.json* ./
-RUN npm ci --legacy-peer-deps
-
-# Copy source and build optimised production bundle (no source maps)
+# Copy source files and install dependencies
 COPY . .
+RUN rm -f package-lock.json && npm install --legacy-peer-deps
 ENV CI=false
 ENV DISABLE_ESLINT_PLUGIN=true
 ENV GENERATE_SOURCEMAP=false

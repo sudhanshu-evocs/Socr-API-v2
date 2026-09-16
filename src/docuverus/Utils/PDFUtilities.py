@@ -88,6 +88,9 @@ class PDFUtilities:
     def highlight_usages_of_fonts_in_pdf(input_pdf_path, output_pdf_path, font_name, color_str="1,1,0"):
         doc = fitz.open(input_pdf_path)
         color = tuple(map(float, color_str.split(",")))
+        fonts_to_check = [f.strip().lower() for f in (font_name or "").split(",") if f.strip()]
+        highlight_all = "all" in fonts_to_check or not fonts_to_check
+
         for page in doc:
             text_instances = page.get_text("dict")["blocks"]
 
@@ -95,7 +98,8 @@ class PDFUtilities:
                 if instance["type"] == 0:
                     for line in instance["lines"]:
                         for span in line["spans"]:
-                            if span["font"].lower() == font_name.lower():
+                            span_font = span["font"].lower()
+                            if highlight_all or any(f == span_font or f in span_font for f in fonts_to_check):
                                 rect = fitz.Rect(span["bbox"])
                                 highlight = page.add_highlight_annot(rect)
                                 highlight.set_colors(stroke=color)
@@ -105,8 +109,11 @@ class PDFUtilities:
         doc.save(output_pdf_path)
 
     @staticmethod
-    def highlight_usages_of_fonts_in_byte_representation_of_pdf(byte_str, font_name, color):
+    def highlight_usages_of_fonts_in_byte_representation_of_pdf(byte_str, font_name, color=(1, 0, 0)):
         doc = fitz.open(stream=byte_str)
+        fonts_to_check = [f.strip().lower() for f in (font_name or "").split(",") if f.strip()]
+        highlight_all = "all" in fonts_to_check or not fonts_to_check
+
         for page in doc:
             text_instances = page.get_text("dict")["blocks"]
 
@@ -114,7 +121,8 @@ class PDFUtilities:
                 if instance["type"] == 0:
                     for line in instance["lines"]:
                         for span in line["spans"]:
-                            if span["font"].lower() == font_name.lower():
+                            span_font = span["font"].lower()
+                            if highlight_all or any(f == span_font or f in span_font for f in fonts_to_check):
                                 rect = fitz.Rect(span["bbox"])
                                 highlight = page.add_highlight_annot(rect)
                                 highlight.set_colors(stroke=color)

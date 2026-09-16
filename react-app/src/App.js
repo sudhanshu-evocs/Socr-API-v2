@@ -89,6 +89,13 @@ const ShieldIcon = () => (
   </svg>
 );
 
+const EyeIcon = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+    <circle cx="12" cy="12" r="3"></circle>
+  </svg>
+);
+
 const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 const normalizeStatus = (status, fallback = 'N/A') => {
@@ -105,6 +112,20 @@ const statusClassName = (status) => {
   return ['pass', 'fdr', 'fail'].includes(normalized) ? normalized : 'neutral';
 };
 
+const isImageFile = (file) => {
+  if (!file) return false;
+  if (typeof file === 'string') {
+    return /\.(png|jpe?g|webp|gif|bmp|svg|tiff?)$/i.test(file);
+  }
+  if (typeof file === 'object') {
+    const mimeType = file.type && typeof file.type === 'string' ? file.type : '';
+    if (mimeType.toLowerCase().startsWith('image/')) return true;
+    const name = file.name && typeof file.name === 'string' ? file.name : '';
+    if (/\.(png|jpe?g|webp|gif|bmp|svg|tiff?)$/i.test(name)) return true;
+  }
+  return false;
+};
+
 function App() {
   const [fileName, setFileName] = useState('');
   const [selectedFiles, setSelectedFiles] = useState([]);
@@ -118,26 +139,62 @@ function App() {
   const [isDragOver, setIsDragOver] = useState(false);
   const [loading, setLoading] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [viewMode, setViewMode] = useState('checklist'); // 'checklist' | 'comparison' | 'rawText' | 'rawJson'
+  const [viewMode, setViewMode] = useState('checklist'); // 'checklist' | 'preview' | 'rawText' | 'rawJson'
   const [categories, setCategories] = useState({ 'Bank Statements': [], 'Paystubs & Earnings': [] });
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [errorMessage, setErrorMessage] = useState('');
   const [detectingTemplate, setDetectingTemplate] = useState(false);
   const [templateDetection, setTemplateDetection] = useState(null);
-  const [siftEnabled, setSiftEnabled] = useState(false);
-  const [siftResult, setSiftResult] = useState(null);
-  const [siftLoading, setSiftLoading] = useState(false);
-  const [siftVisualizationMode, setSiftVisualizationMode] = useState('clear');
+  const [previewUrl, setPreviewUrl] = useState(null);
+  const [showHighlights, setShowHighlights] = useState(false);
+  const [highlightedUrl, setHighlightedUrl] = useState(null);
+  const [highlightLoading, setHighlightLoading] = useState(false);
+
   const [apiStatus, setApiStatus] = useState('checking');
   const detectionRequestRef = useRef(0);
+
+  const currentFile = useMemo(() => {
+    if (typeof fileName === 'object' && fileName) return fileName;
+    if (selectedFiles[activeBatchIndex]) return selectedFiles[activeBatchIndex];
+    if (selectedFiles[0]) return selectedFiles[0];
+    return fileName;
+  }, [fileName, selectedFiles, activeBatchIndex]);
+
+  useEffect(() => {
+    let url = null;
+    if (currentFile && (currentFile instanceof Blob || typeof currentFile === 'object')) {
+      try {
+        url = URL.createObjectURL(currentFile);
+        setPreviewUrl(url);
+      } catch (e) {
+        setPreviewUrl(null);
+      }
+    } else if (typeof currentFile === 'string' && currentFile.startsWith('blob:')) {
+      setPreviewUrl(currentFile);
+    } else {
+      setPreviewUrl(null);
+    }
+    return () => {
+      if (url && typeof URL.revokeObjectURL === 'function') {
+        try { URL.revokeObjectURL(url); } catch (e) {}
+      }
+    };
+  }, [currentFile]);
+
+  useEffect(() => {
+    setShowHighlights(false);
+    if (highlightedUrl && typeof URL.revokeObjectURL === 'function') {
+      try { URL.revokeObjectURL(highlightedUrl); } catch (e) {}
+    }
+    setHighlightedUrl(null);
+  }, [currentFile]);
 
   useEffect(() => {
     const fetchTemplateNames = async () => {
       try {
-        const [namesRes, catRes, siftConfigRes] = await Promise.all([
+        const [namesRes, catRes] = await Promise.all([
           axios.get(`${API_BASE_URL}/template_names`),
-          axios.get(`${API_BASE_URL}/template_categories`).catch(() => null),
-          axios.get(`${API_BASE_URL}/api/experimental/sift-config`).catch(() => null)
+          axios.get(`${API_BASE_URL}/template_categories`).catch(() => null)
         ]);
 
         if (namesRes && Array.isArray(namesRes.data)) {
@@ -151,7 +208,6 @@ function App() {
         if (catRes && catRes.data) {
           setCategories(catRes.data);
         }
-        setSiftEnabled(siftConfigRes?.data?.enabled === true);
         setApiStatus('ready');
       } catch (error) {
         console.error('Error fetching template names or categories:', error);
@@ -267,43 +323,45 @@ function App() {
   const selectFiles = (incomingFiles) => {
     const files = Array.from(incomingFiles || []);
     if (!files.length) return;
-    const pdfFiles = files.filter((file) => file.type === 'application/pdf' || file.name?.toLowerCase().endsWith('.pdf'));
-    if (pdfFiles.length !== files.length) {
+    const validFiles = files.filter((file) => {
+      const isPdf = file.type === 'application/pdf' || file.name?.toLowerCase().endsWith('.pdf');
+      const isImg = isImageFile(file);
+      return isPdf || isImg;
+    });
+    if (validFiles.length !== files.length) {
       setFileName('');
       setSelectedFiles([]);
       setFileDetections([]);
       setBatchResults([]);
       setResponseMessage('');
-      setErrorMessage('Please select a PDF document or a batch of PDF documents. Other file types cannot be validated.');
+      setErrorMessage('Please select a PDF document or image file. Other file types cannot be validated.');
       setTemplateDetection(null);
       return;
     }
-    if (pdfFiles.length > 10) {
-      setErrorMessage('Select no more than 10 PDF documents in one local batch.');
+    if (validFiles.length > 10) {
+      setErrorMessage('Select no more than 10 documents in one local batch.');
       return;
     }
     const requestId = detectionRequestRef.current + 1;
     detectionRequestRef.current = requestId;
-    setSelectedFiles(pdfFiles);
-    setFileDetections(pdfFiles.map((file) => ({ file, selected_template: '', status: 'detecting' })));
-    setFileName(pdfFiles[0]);
+    setSelectedFiles(validFiles);
+    setFileDetections(validFiles.map((file) => ({ file, selected_template: '', status: 'detecting' })));
+    setFileName(validFiles[0]);
     setBatchResults([]);
     setActiveBatchIndex(0);
     setResponseMessage('');
-    setSiftResult(null);
-    setSiftVisualizationMode('clear');
     setErrorMessage('');
     setViewMode('checklist');
     setSelectedTemplate('');
     setSearchTerm('');
     setSelectedCategory('All');
-    setTemplateDetection(pdfFiles.length === 1 ? { status: 'detecting' } : null);
+    setTemplateDetection(validFiles.length === 1 ? { status: 'detecting' } : null);
     setDetectingTemplate(true);
-    if (pdfFiles.length === 1) {
+    if (validFiles.length === 1) {
       setFileDetections([]);
-      detectUploadedTemplate(pdfFiles[0], requestId);
+      detectUploadedTemplate(validFiles[0], requestId);
     } else {
-      detectBatchTemplates(pdfFiles, requestId);
+      detectBatchTemplates(validFiles, requestId);
     }
   };
 
@@ -322,8 +380,6 @@ function App() {
     setBatchResults([]);
     setActiveBatchIndex(0);
     setResponseMessage('');
-    setSiftResult(null);
-    setSiftVisualizationMode('clear');
     setTemplateDetection(null);
     setDetectingTemplate(false);
     setErrorMessage('');
@@ -365,8 +421,6 @@ function App() {
     setActiveBatchIndex(index);
     setFileName(item.file);
     setResponseMessage(item.socrResponse ? JSON.stringify(item.socrResponse, null, 2) : '');
-    setSiftResult(item.siftResult || null);
-    setSiftVisualizationMode('clear');
     setSelectedTemplate(item.template || '');
     setSearchTerm(item.template || '');
     setSelectedCategory(item.category || 'All');
@@ -381,13 +435,10 @@ function App() {
     }
     setLoading(true);
     setResponseMessage('');
-    setSiftResult(null);
-    setSiftVisualizationMode('clear');
     setErrorMessage('');
     const defaultTemplate = selectedTemplate || searchTerm || (templateNames.length > 0 ? templateNames[0] : '');
     const filesToValidate = selectedFiles.length ? selectedFiles : [fileName];
     setBatchResults([]);
-    setSiftLoading(siftEnabled);
 
     const validateFile = async (file, index) => {
       const detection = selectedFiles.length > 1 ? fileDetections[index] : null;
@@ -398,31 +449,12 @@ function App() {
       formData.append('template', templateToUse);
       try {
         const response = await axios.post(`${API_BASE_URL}/validate_metadata`, formData);
-        let experimentalResult = null;
-        if (siftEnabled) {
-          const siftFormData = new FormData();
-          siftFormData.append('file', file);
-          siftFormData.append('template', templateToUse);
-          siftFormData.append('document_type', documentType);
-          try {
-            const siftResponse = await axios.post(`${API_BASE_URL}/api/experimental/sift-compare`, siftFormData);
-            experimentalResult = siftResponse.data;
-          } catch (siftError) {
-            experimentalResult = {
-              status: 'ERROR',
-              template: templateToUse,
-              message: siftError.response?.data?.error || 'The experimental SIFT request failed independently of SOCR validation.',
-              error: siftError.message || 'SIFT request failed'
-            };
-          }
-        }
         return {
           file,
           template: templateToUse,
           category: detection?.category || selectedCategory,
           documentType,
           socrResponse: response.data,
-          siftResult: experimentalResult,
           socrStatus: response.data?.final_validation_results?.valid || 'UNKNOWN',
           error: ''
         };
@@ -433,7 +465,6 @@ function App() {
           category: detection?.category || selectedCategory,
           documentType,
           socrResponse: null,
-          siftResult: null,
           socrStatus: 'ERROR',
           error: error.response?.data?.error || 'Validation could not be completed for this PDF.'
         };
@@ -449,7 +480,6 @@ function App() {
         setErrorMessage('Validation could not be completed for any PDF. Confirm that the API is available and try again.');
       }
     } finally {
-      setSiftLoading(false);
       setLoading(false);
     }
   };
@@ -482,6 +512,48 @@ function App() {
         }
       })
       .catch(error => console.error('Error highlighting fonts:', error));
+  };
+
+  const fetchHighlightedPdf = async (font = 'all') => {
+    if (!currentFile) return;
+    setHighlightLoading(true);
+    const formData = new FormData();
+    formData.append('file', currentFile);
+    formData.append('fonts', font);
+
+    try {
+      const response = await axios.post(`${API_BASE_URL}/highlight_fonts`, formData, {
+        responseType: 'blob'
+      });
+      if (response && response.data) {
+        let url = null;
+        if (window.URL && typeof window.URL.createObjectURL === 'function') {
+          url = window.URL.createObjectURL(new Blob([response.data], { type: 'application/pdf' }));
+        }
+        if (highlightedUrl && typeof URL.revokeObjectURL === 'function') {
+          try { URL.revokeObjectURL(highlightedUrl); } catch (e) {}
+        }
+        setHighlightedUrl(url);
+        setShowHighlights(true);
+      }
+    } catch (error) {
+      console.error('Error fetching highlighted PDF:', error);
+      setErrorMessage('Could not generate PDF highlights. Make sure the API is active.');
+    } finally {
+      setHighlightLoading(false);
+    }
+  };
+
+  const handleToggleHighlight = () => {
+    if (showHighlights) {
+      setShowHighlights(false);
+    } else {
+      if (highlightedUrl) {
+        setShowHighlights(true);
+      } else {
+        fetchHighlightedPdf('all');
+      }
+    }
   };
 
   const handleCopyText = (textToCopy) => {
@@ -717,28 +789,7 @@ function App() {
     }
   }, [responseMessage, selectedTemplate, fileName]);
 
-  const formatSiftMetric = (value, format = 'number') => {
-    if (value === null || value === undefined) return 'N/A';
-    if (format === 'percent') return `${Math.round(value * 100)}%`;
-    if (format === 'milliseconds') return `${Math.round(value)} ms`;
-    return String(value);
-  };
 
-  const officialRuleStatus = (key) => parsedDetails?.rulesList.find((rule) => rule.key === key)?.status || 'N/A';
-
-  const siftInterpretation = () => {
-    if (!siftResult) return 'Run validation to perform the independent visual comparison.';
-    if (siftResult.status === 'NO_REFERENCE' || siftResult.status === 'ERROR') return siftResult.message;
-    const officialPhrase = parsedDetails?.validState === 'Pass'
-      ? 'SOCR metadata validation passed'
-      : 'SOCR metadata validation requires attention';
-    const visualPhrase = siftResult.status === 'VISUAL_MATCH'
-      ? `the uploaded document visually resembles the configured ${siftResult.template} reference template`
-      : siftResult.status === 'PARTIAL_MATCH'
-        ? `the uploaded document has partial visual correspondence with the configured ${siftResult.template} reference template`
-        : `the uploaded document has low visual correspondence with the configured ${siftResult.template} reference template`;
-    return `${officialPhrase}, while ${visualPhrase}. Visual resemblance does not establish authenticity.`;
-  };
 
   const workflowStep = responseMessage ? 3 : fileName && batchTemplatesReady ? 2 : 1;
   const readinessMessage = loading
@@ -1049,7 +1100,7 @@ function App() {
                 <button
                   type="button"
                   role="tab"
-                  aria-label={`${item.file.name}, ${item.template}, SOCR: ${item.socrStatus}${item.siftResult ? `, visual: ${item.siftResult.status}` : ''}`}
+                  aria-label={`${item.file.name}, ${item.template}, SOCR: ${item.socrStatus}`}
                   aria-selected={activeBatchIndex === index}
                   className={activeBatchIndex === index ? 'active' : ''}
                   onClick={() => showBatchResult(batchResults, index)}
@@ -1061,7 +1112,6 @@ function App() {
                     <small>{item.template}</small>
                     <span className="batch-result-statuses">
                       <b className={`batch-status ${statusClassName(item.socrStatus)}`}>SOCR: {item.socrStatus}</b>
-                      {item.siftResult && <b className="batch-status experimental">Visual: {item.siftResult.status}</b>}
                     </span>
                   </div>
                 </button>
@@ -1194,6 +1244,14 @@ function App() {
                   </button>
 
                   <button 
+                    className={`tab-btn ${viewMode === 'preview' ? 'active' : ''}`}
+                    onClick={() => setViewMode('preview')}
+                  >
+                    <EyeIcon />
+                    <span>PDF Preview</span>
+                  </button>
+
+                  <button 
                     className={`tab-btn ${viewMode === 'rawText' ? 'active' : ''}`}
                     onClick={() => setViewMode('rawText')}
                   >
@@ -1209,15 +1267,6 @@ function App() {
                     <span>Raw JSON Output</span>
                   </button>
 
-                  {siftEnabled && (
-                    <button
-                      className={`tab-btn ${viewMode === 'comparison' ? 'active' : ''}`}
-                      onClick={() => setViewMode('comparison')}
-                    >
-                      <ShieldIcon />
-                      <span>SOCR vs SIFT</span>
-                    </button>
-                  )}
                 </div>
               </>
             )}
@@ -1270,7 +1319,7 @@ function App() {
               </div>
             )}
 
-            {/* TAB 2: Raw Text Area Report */}
+            {/* TAB 3: Raw Text Area Report */}
             {viewMode === 'rawText' && parsedDetails && (
               <div className="raw-text-container">
                 <div className="results-header">
@@ -1280,144 +1329,103 @@ function App() {
                   </div>
 
                   <button 
+                    type="button"
                     onClick={() => handleCopyText(parsedDetails.rawTextReport)}
-                    style={{
-                      background: '#ffffff',
-                      border: '1px solid #cbd5e1',
-                      color: '#475569',
-                      borderRadius: '8px',
-                      padding: '6px 12px',
-                      fontSize: '0.8rem',
-                      cursor: 'pointer',
-                      display: 'flex',
-                      alignItems: 'center',
-                      gap: '6px'
-                    }}
+                    className="btn-secondary"
+                    style={{ padding: '5px 10px', fontSize: '0.76rem' }}
                   >
                     <CopyIcon />
                     <span>{copied ? 'Copied!' : 'Copy Text'}</span>
                   </button>
                 </div>
-                <pre className="raw-text-report">{parsedDetails.rawTextReport}</pre>
+
+                <pre className="code-viewer">{parsedDetails.rawTextReport}</pre>
               </div>
             )}
 
-            {viewMode === 'comparison' && parsedDetails && siftEnabled && (
-              <section className="sift-comparison" aria-label="SOCR and experimental SIFT comparison">
-                <div className="experimental-notice">
-                  <span className="testing-badge">Experimental</span>
-                  <div>
-                    <strong>Experimental Visual Template Comparison (SIFT)</strong>
-                    <p>Visual template comparison only. This result does not affect the official SOCR validation.</p>
+            {/* TAB 2: Document Preview (PDF / Image) */}
+            {viewMode === 'preview' && (
+              <div className="pdf-preview-container">
+                <div className="results-header">
+                  <div className="results-title">
+                    <EyeIcon />
+                    <span>Document Preview — {typeof currentFile === 'object' && currentFile?.name ? currentFile.name : (typeof currentFile === 'string' ? currentFile : 'Document')}</span>
                   </div>
-                </div>
 
-                <div className="comparison-headings">
-                  <div><strong>SOCR / DOCUVERUS</strong><span>Authoritative</span></div>
-                  <div><strong>SIFT VISUAL COMPARISON</strong><span>Experimental</span></div>
-                </div>
-
-                {siftLoading ? (
-                  <div className="sift-loading" role="status"><span className="detection-spinner"></span>Comparing page 1 with the configured baseline…</div>
-                ) : (
-                  <div className="comparison-table" role="table">
-                    {[
-                      ['Overall', parsedDetails.validState, siftResult?.status || 'N/A'],
-                      ['Template', parsedDetails.templateName, siftResult?.baseline_key ? `${siftResult.template} Reference` : 'N/A'],
-                      ['Producer', officialRuleStatus('producer'), 'N/A'],
-                      ['Creator', officialRuleStatus('creator'), 'N/A'],
-                      ['Fonts', officialRuleStatus('fonts'), 'N/A'],
-                      ['Dates', officialRuleStatus('dates'), 'N/A'],
-                      ['File Size', officialRuleStatus('file_size'), 'N/A'],
-                      ['Visual Similarity', 'N/A', formatSiftMetric(siftResult?.similarity_score, 'percent')],
-                      ['Reference Keypoints', 'N/A', formatSiftMetric(siftResult?.reference_keypoints)],
-                      ['Document Keypoints', 'N/A', formatSiftMetric(siftResult?.test_keypoints)],
-                      ['Raw Matches', 'N/A', formatSiftMetric(siftResult?.raw_matches)],
-                      ['Good Matches', 'N/A', formatSiftMetric(siftResult?.good_matches)],
-                      ['RANSAC Inliers', 'N/A', formatSiftMetric(siftResult?.inlier_matches)],
-                      ['Inlier Ratio', 'N/A', formatSiftMetric(siftResult?.inlier_ratio, 'percent')],
-                      ['Feature Coverage', 'N/A', formatSiftMetric(siftResult?.feature_coverage, 'percent')],
-                      ['Layout', 'N/A', siftResult?.layout_match === null || siftResult?.layout_match === undefined ? 'N/A' : siftResult.layout_match ? 'MATCH' : 'NOT ESTABLISHED'],
-                      ['Render Time', 'N/A', formatSiftMetric(siftResult?.render_time_ms, 'milliseconds')],
-                      ['Feature Detection Time', 'N/A', formatSiftMetric(siftResult?.feature_detection_time_ms, 'milliseconds')],
-                      ['Matching Time', 'N/A', formatSiftMetric(siftResult?.matching_time_ms, 'milliseconds')],
-                      ['Total SIFT Time', 'N/A', formatSiftMetric(siftResult?.total_sift_time_ms, 'milliseconds')]
-                    ].map(([label, socrValue, siftValue]) => (
-                      <div className="comparison-row" role="row" key={label}>
-                        <strong role="rowheader">{label}</strong>
-                        <span role="cell">{socrValue}</span>
-                        <span role="cell">{siftValue}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
-
-                {!siftLoading && (siftResult?.reference_preview || siftResult?.test_preview || siftResult?.match_visualization) && (
-                  <section className="sift-visual-evidence" aria-labelledby="sift-visual-evidence-title">
-                    <div className="sift-visual-evidence-heading">
-                      <strong id="sift-visual-evidence-title">How SIFT compared page 1</strong>
-                      <p>The baseline and uploaded PDF are rendered as images. Colored lines show a readable subset of matches accepted by RANSAC as geometrically consistent.</p>
-                    </div>
-                    <div className="sift-page-previews">
-                      {siftResult?.reference_preview && (
-                        <figure>
-                          <figcaption><strong>Known-good baseline</strong><span>{siftResult.template} reference · page 1</span></figcaption>
-                          <img src={siftResult.reference_preview} alt={`${siftResult.template} known-good baseline page 1`} loading="lazy" />
-                        </figure>
-                      )}
-                      {siftResult?.test_preview && (
-                        <figure>
-                          <figcaption><strong>Uploaded PDF</strong><span>Document under comparison · page 1</span></figcaption>
-                          <img src={siftResult.test_preview} alt="Uploaded PDF page 1 used for SIFT comparison" loading="lazy" />
-                        </figure>
-                      )}
-                    </div>
-                    {siftResult?.match_visualization && (
-                      <figure className="sift-match-figure">
-                        <figcaption>
-                          <div>
-                            <strong>RANSAC-confirmed feature matches</strong>
-                            <span>
-                              Baseline on the left, uploaded document on the right · showing {siftVisualizationMode === 'detailed'
-                                ? siftResult.detailed_visualized_matches
-                                : siftResult.visualized_matches} of {siftResult.inlier_matches ?? 'the'} inliers
-                            </span>
-                          </div>
-                          {siftResult?.detailed_match_visualization && (
-                            <div className="sift-view-toggle" role="group" aria-label="Feature match detail">
-                              <button type="button" aria-pressed={siftVisualizationMode === 'clear'} onClick={() => setSiftVisualizationMode('clear')}>Clear view</button>
-                              <button type="button" aria-pressed={siftVisualizationMode === 'detailed'} onClick={() => setSiftVisualizationMode('detailed')}>Detailed view</button>
-                            </div>
-                          )}
-                        </figcaption>
-                        <div className="sift-match-legend" aria-label="Feature match legend">
-                          <span><i className="sift-endpoint-sample" aria-hidden="true"></i>Circles mark corresponding SIFT keypoints</span>
-                          <span><i className="sift-line-sample" aria-hidden="true"></i>Lines connect RANSAC-confirmed pairs</span>
-                          <span>Colors separate vertical page regions—not match quality</span>
-                        </div>
-                        <img
-                          src={siftVisualizationMode === 'detailed' && siftResult.detailed_match_visualization
-                            ? siftResult.detailed_match_visualization
-                            : siftResult.match_visualization}
-                          alt={`SIFT feature match visualization in ${siftVisualizationMode} view connecting the baseline and uploaded PDF`}
-                          loading="lazy"
-                        />
-                        <p className="sift-match-help">
-                          {siftVisualizationMode === 'clear'
-                            ? 'Clear view selects strong matches from different page areas so one logo or table does not dominate the explanation.'
-                            : 'Detailed view shows a larger subset of accepted inliers and may contain overlapping lines.'}
-                        </p>
-                      </figure>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                    {!isImageFile(currentFile) && (
+                      <button
+                        type="button"
+                        className={`btn-highlight-toggle ${showHighlights ? 'active' : ''}`}
+                        onClick={handleToggleHighlight}
+                        disabled={highlightLoading}
+                        aria-label="Toggle highlighted PDF text"
+                      >
+                        {highlightLoading ? (
+                          <span>Highlighting...</span>
+                        ) : (
+                          <>
+                            <span className="highlight-dot"></span>
+                            <span>{showHighlights ? 'Hide Highlights' : 'Highlight Extracted Parts'}</span>
+                          </>
+                        )}
+                      </button>
                     )}
-                  </section>
+
+                    {(showHighlights && highlightedUrl ? highlightedUrl : previewUrl) && (
+                      <a 
+                        href={showHighlights && highlightedUrl ? highlightedUrl : previewUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="btn-preview-new-tab"
+                      >
+                        Open in New Tab ↗
+                      </a>
+                    )}
+                  </div>
+                </div>
+
+                {showHighlights && (
+                  <div className="highlight-banner" role="status">
+                    <span className="highlight-indicator-dot"></span>
+                    <span><strong>Extracted Parts Highlighted:</strong> Red box annotations highlight fonts and text extracted from this PDF for metadata analysis.</span>
+                  </div>
                 )}
 
-                <div className="sift-interpretation">
-                  <strong>Interpretation</strong>
-                  <p>{siftLoading ? 'The experimental comparison is still running. The SOCR result above is already authoritative.' : siftInterpretation()}</p>
-                </div>
-              </section>
+                {previewUrl ? (
+                  isImageFile(currentFile) ? (
+                    <div className="image-preview-wrapper" data-testid="preview-image-wrapper">
+                      <img
+                        src={previewUrl}
+                        alt={typeof currentFile === 'object' && currentFile?.name ? currentFile.name : (typeof currentFile === 'string' ? currentFile : 'Document Preview')}
+                        className="document-preview-image"
+                        data-testid="preview-image"
+                      />
+                    </div>
+                  ) : (
+                    <object
+                      data={showHighlights && highlightedUrl ? highlightedUrl : previewUrl}
+                      type="application/pdf"
+                      className="pdf-preview-object"
+                      data-testid="preview-pdf"
+                    >
+                      <iframe
+                        src={showHighlights && highlightedUrl ? highlightedUrl : previewUrl}
+                        title="PDF Document Preview"
+                        className="pdf-preview-iframe"
+                      />
+                    </object>
+                  )
+                ) : (
+                  <div className="pdf-preview-empty">
+                    <AlertIcon />
+                    <span>No active document available for preview.</span>
+                  </div>
+                )}
+              </div>
             )}
+
+
 
             {/* TAB 3: Raw JSON Output (Preserved for tests) */}
             <div style={{ display: viewMode === 'rawJson' || !parsedDetails ? 'block' : 'none' }}>

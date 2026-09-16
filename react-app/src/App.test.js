@@ -7,6 +7,13 @@ import axios from 'axios';
 jest.mock('axios');
 
 
+if (!window.URL.createObjectURL) {
+  window.URL.createObjectURL = jest.fn(() => 'blob:http://localhost/dummy-pdf-id');
+}
+if (!window.URL.revokeObjectURL) {
+  window.URL.revokeObjectURL = jest.fn();
+}
+
 var templateNames = []
 beforeEach(async () => {
   jest.clearAllMocks();
@@ -14,9 +21,7 @@ beforeEach(async () => {
   axios.get.mockImplementation((url) => Promise.resolve({
     data: url.endsWith('/template_categories')
       ? { 'Bank Statements': ['Template1', 'Template2'], 'Paystubs & Earnings': ['Template3'] }
-      : url.endsWith('/api/experimental/sift-config')
-        ? { enabled: false }
-        : templateNames
+      : templateNames
   }));
   axios.post.mockImplementation((url) => {
     if (url.endsWith('/detect_template')) {
@@ -214,93 +219,6 @@ test('workspace is SOCR-only and includes the metadata validator', () => {
   expect(screen.queryByText(/socr vs/i)).not.toBeInTheDocument();
 });
 
-test('feature flag exposes an experimental comparison without changing the SOCR response', async () => {
-  axios.get.mockImplementation((url) => Promise.resolve({
-    data: url.endsWith('/template_categories')
-      ? { 'Bank Statements': ['Template1'], 'Paystubs & Earnings': [] }
-      : url.endsWith('/api/experimental/sift-config')
-        ? { enabled: true }
-        : ['Template1']
-  }));
-  axios.post.mockImplementation((url) => {
-    if (url.endsWith('/detect_template')) {
-      return Promise.resolve({ data: { auto_select: true, template_name: 'Template1', category: 'Bank Statements', document_class: 'Bank Statement', confidence: 92 } });
-    }
-    if (url.endsWith('/validate_metadata')) {
-      return Promise.resolve({
-        data: {
-          final_validation_results: { valid: 'FDR', validation_message_code: 'MSG_REVIEW' },
-          template_rule_set_validation_results: [{ template: { name: 'Template1', valid: 'Pass' } }]
-        }
-      });
-    }
-    if (url.endsWith('/api/experimental/sift-compare')) {
-      return Promise.resolve({
-        data: {
-          status: 'VISUAL_MATCH', template: 'PNC Bank', baseline_key: 'PNC_Bank', similarity_score: 0.72,
-          reference_keypoints: 4100, test_keypoints: 3900, raw_matches: 3500, good_matches: 900,
-          inlier_matches: 620, inlier_ratio: 0.69, feature_coverage: 0.73, layout_match: true,
-          render_time_ms: 20, feature_detection_time_ms: 80, matching_time_ms: 30, total_sift_time_ms: 130,
-          reference_preview: 'data:image/jpeg;base64,baseline', test_preview: 'data:image/jpeg;base64,test',
-          match_visualization: 'data:image/jpeg;base64,matches-clear', visualized_matches: 40,
-          detailed_match_visualization: 'data:image/jpeg;base64,matches-detailed', detailed_visualized_matches: 120
-        }
-      });
-    }
-    return Promise.resolve({ data: {} });
-  });
-
-  cleanup();
-  render(<App />);
-  const file = new File(['dummy content'], 'example.pdf', { type: 'application/pdf' });
-  fireEvent.change(screen.getByLabelText(/select file/i), { target: { files: [file] } });
-  await screen.findByText(/auto-selected Template1/i);
-  fireEvent.click(screen.getByRole('button', { name: /submit metadata validation/i }));
-  await screen.findByText(/fdr alert/i);
-  fireEvent.click(await screen.findByRole('button', { name: /socr vs sift/i }));
-
-  expect(screen.getByText(/experimental visual template comparison/i)).toBeInTheDocument();
-  expect(screen.getByText(/does not affect the official socr validation/i)).toBeInTheDocument();
-  expect(await screen.findByText('72%')).toBeInTheDocument();
-  expect(screen.getByText('620')).toBeInTheDocument();
-  expect(screen.getByRole('img', { name: /known-good baseline page 1/i })).toBeInTheDocument();
-  expect(screen.getByRole('img', { name: /uploaded pdf page 1 used for sift/i })).toBeInTheDocument();
-  const matchImage = screen.getByRole('img', { name: /feature match visualization in clear view/i });
-  expect(matchImage).toHaveAttribute('src', 'data:image/jpeg;base64,matches-clear');
-  expect(screen.getByText(/showing 40 of 620 inliers/i)).toBeInTheDocument();
-  fireEvent.click(screen.getByRole('button', { name: /detailed view/i }));
-  expect(screen.getByRole('img', { name: /feature match visualization in detailed view/i })).toHaveAttribute('src', 'data:image/jpeg;base64,matches-detailed');
-  expect(screen.getByText(/showing 120 of 620 inliers/i)).toBeInTheDocument();
-  expect(screen.getByText(/visual resemblance does not establish authenticity/i)).toBeInTheDocument();
-  expect(screen.getAllByText('FDR').length).toBeGreaterThan(0);
-});
-
-test('no reference displays N/A metrics instead of zero or mismatch', async () => {
-  axios.get.mockImplementation((url) => Promise.resolve({
-    data: url.endsWith('/template_categories')
-      ? { 'Bank Statements': ['Template1'], 'Paystubs & Earnings': [] }
-      : url.endsWith('/api/experimental/sift-config') ? { enabled: true } : ['Template1']
-  }));
-  axios.post.mockImplementation((url) => {
-    if (url.endsWith('/detect_template')) return Promise.resolve({ data: { auto_select: true, template_name: 'Template1', category: 'Bank Statements', document_class: 'Bank Statement', confidence: 92 } });
-    if (url.endsWith('/validate_metadata')) return Promise.resolve({ data: { final_validation_results: { valid: 'Pass' }, template_rule_set_validation_results: [] } });
-    if (url.endsWith('/api/experimental/sift-compare')) return Promise.resolve({ data: { status: 'NO_REFERENCE', template: 'Chase Bank', message: 'No baseline reference image is available for Chase Bank.', similarity_score: null, good_matches: null, inlier_ratio: null, layout_match: null } });
-    return Promise.resolve({ data: {} });
-  });
-
-  cleanup();
-  render(<App />);
-  fireEvent.change(screen.getByLabelText(/select file/i), { target: { files: [new File(['pdf'], 'chase.pdf', { type: 'application/pdf' })] } });
-  await screen.findByText(/auto-selected Template1/i);
-  fireEvent.click(screen.getByRole('button', { name: /submit metadata validation/i }));
-  await screen.findByText(/metadata validated successfully/i);
-  fireEvent.click(await screen.findByRole('button', { name: /socr vs sift/i }));
-
-  expect(await screen.findByText('NO_REFERENCE')).toBeInTheDocument();
-  expect(screen.getByText(/no baseline reference image is available for chase bank/i)).toBeInTheDocument();
-  expect(screen.getAllByText('N/A').length).toBeGreaterThan(5);
-  expect(screen.queryByText('MISMATCH')).not.toBeInTheDocument();
-});
 
 test('API endpoint is called with the selected file when the submit button is pressed', async () => {
   const searchInputElement = screen.getByRole('textbox', { name: /search/i });
@@ -552,3 +470,42 @@ test('explainability preview shows expected, found, why, severity, and decisive 
   expect(screen.getByText(/priority manual review/i)).toBeInTheDocument();
   expect(screen.getByText(/not a fraud probability/i)).toBeInTheDocument();
 });
+
+test('document preview tab displays embedded PDF iframe when a PDF is selected', async () => {
+  const file = new File(['pdf content'], 'sample_bank_statement.pdf', { type: 'application/pdf' });
+  fireEvent.change(screen.getByLabelText(/select file/i), { target: { files: [file] } });
+  await screen.findByText(/auto-selected Template1/i);
+  axios.post.mockResolvedValue({
+    data: {
+      final_validation_results: { valid: 'Pass', validation_message_code: 'MSG_VALID_FILE' },
+      template_rule_set_validation_results: []
+    }
+  });
+  fireEvent.click(screen.getByRole('button', { name: /submit metadata validation/i }));
+  await screen.findByText(/metadata validated successfully/i);
+
+  const previewTabBtn = await screen.findByRole('button', { name: /pdf preview/i });
+  fireEvent.click(previewTabBtn);
+
+  expect(await screen.findByText(/document preview — sample_bank_statement\.pdf/i)).toBeInTheDocument();
+});
+
+test('document preview tab displays image element when an image file is selected', async () => {
+  const file = new File(['image content'], 'sample_paystub.png', { type: 'image/png' });
+  fireEvent.change(screen.getByLabelText(/select file/i), { target: { files: [file] } });
+  await screen.findByText(/auto-selected Template1/i);
+  axios.post.mockResolvedValue({
+    data: {
+      final_validation_results: { valid: 'Pass', validation_message_code: 'MSG_VALID_FILE' },
+      template_rule_set_validation_results: []
+    }
+  });
+  fireEvent.click(screen.getByRole('button', { name: /submit metadata validation/i }));
+  await screen.findByText(/metadata validated successfully/i);
+
+  const previewTabBtn = await screen.findByRole('button', { name: /pdf preview/i });
+  fireEvent.click(previewTabBtn);
+
+  expect(await screen.findByText(/document preview — sample_paystub\.png/i)).toBeInTheDocument();
+});
+

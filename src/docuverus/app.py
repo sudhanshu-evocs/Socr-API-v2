@@ -3,8 +3,13 @@ import os
 import sys
 import time
 
-# Add parent 'src' directory to sys.path so 'docuverus' package resolves automatically
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+# Add parent 'src' and repo root to sys.path so packages resolve automatically
+_src_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+_repo_root = os.path.abspath(os.path.join(_src_dir, ".."))
+if _src_dir not in sys.path:
+    sys.path.insert(0, _src_dir)
+if _repo_root not in sys.path:
+    sys.path.insert(0, _repo_root)
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
@@ -236,13 +241,14 @@ def template_categories():
 
 @app.route("/highlight_fonts", methods=["POST"])
 def highlight_fonts():
-    if "file" not in request.files or "fonts" not in request.values:
-        return jsonify({"error": "Missing file or fonts parameter"}), 400
+    if "file" not in request.files:
+        return jsonify({"error": "Missing file parameter"}), 400
+    fonts = request.values.get("fonts", "all")
     try:
         result = PDFUtilities.highlight_usages_of_fonts_in_byte_representation_of_pdf(
-            request.files["file"].stream.read(), request.values["fonts"], (1, 0, 0)
+            request.files["file"].stream.read(), fonts, (1, 0, 0)
         )
-        return result, 200
+        return result, 200, {"Content-Type": "application/pdf"}
     except Exception as e:
         app.logger.error(f"Error in highlight_fonts: {e}")
         return jsonify({"error": "Failed to highlight fonts in the document"}), 500

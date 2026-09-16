@@ -1,9 +1,0 @@
-# Local-only overlay for the experimental visual template comparison.
-# Usage: docker compose -f docker-compose.yml -f docker-compose.sift.yml up -d --build api
-services:
-  api:
-    environment:
-      - ENABLE_SIFT_COMPARISON=true
-    volumes:
-      - ./experimental:/app/experimental
-    command: ["python", "-m", "experimental.sift_comparison.local_app"]

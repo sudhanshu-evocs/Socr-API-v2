@@ -13,8 +13,8 @@ COPY test_suite /app/test_suite
 # Copy the test documents to the container
 COPY test_documents /app/test_documents
 
-# Set environment variables (if needed)
-ENV PYTHONPATH="/app/src"
+# Set environment variables
+ENV PYTHONPATH="/app/src:/app"
 
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r src/requirements.txt

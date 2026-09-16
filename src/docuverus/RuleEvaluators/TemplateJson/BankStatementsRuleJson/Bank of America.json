@@ -67,6 +67,18 @@
                     "multiplicity": 9999
                 },
                 {
+                    "name": "Connections Medium Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Connections_Medium_Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
                     "name": "ITC_Franklin_Gothic_Med",
                     "type": "",
                     "encoding": "",
@@ -146,6 +158,24 @@
             "optional_fonts": [
                 {
                     "name": "Swiss721SWM",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ConnectionsMediumBold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Connections Medium Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Connections_Medium_Bold",
                     "type": "",
                     "encoding": "",
                     "multiplicity": 9999

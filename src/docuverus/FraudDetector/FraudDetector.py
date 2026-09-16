@@ -141,7 +141,10 @@ class FraudDetector:
         }
 
     def _build_image_result(self, metadata):
-        result = self.create_validation_results_dictionary(message_code=MessageCode.MSG_INVALID_IMAGE_DOCUMENT)
+        result = self.create_validation_results_dictionary(
+            valid_state=ValidStates.STATE_FDR,
+            message_code=MessageCode.MSG_INVALID_IMAGE_DOCUMENT,
+        )
         result["template_rule_set_validation_results"] = [self._create_image_empty_rule_set_with_metadata(metadata)]
         return result
 
@@ -333,11 +336,17 @@ class FraudDetector:
         if BrowserPrintedDetector.is_browser_printed_metadata(selected_rule_set):
             return result
 
+        # Keep FDR/review outcomes as FDR. Font mismatch alone should not escalate
+        # unknown/unverifiable documents to Fail (false positives).
+        final_validation_results = result.get("final_validation_results", {})
+        if final_validation_results.get("valid") == ValidStates.STATE_FDR:
+            return result
+
         fonts_valid = selected_rule_set.get("fonts", {}).get("valid")
         if fonts_valid != ValidStates.STATE_FAIL:
             return result
 
-        result["final_validation_results"]["valid"] = ValidStates.STATE_FAIL
+        final_validation_results["valid"] = ValidStates.STATE_FAIL
         return result
 
     def _get_result_maximum_validation_level(self, result):

@@ -1,11 +1,26 @@
 import fitz
 import pytest
 
-from docuverus.RuleEvaluators.FontRuleEvaluator import FontRuleEvaluator
+from docuverus.RuleEvaluators.FontRuleEvaluator import FontRuleEvaluator, normalize_font_name_for_match
 from docuverus.RuleEvaluators.RuleSetFactory import RuleSetFactory
 from docuverus.Utils.FileUtilities import FileUtilities
 from docuverus.Utils.PDFUtilities import PDFUtilities
 from test_suite.support.assertions import assert_dict_contains
+
+
+def test_normalize_font_name_for_match_ignores_spaces_underscores_and_case():
+    assert normalize_font_name_for_match("Connections Medium Bold") == "connectionsmediumbold"
+    assert normalize_font_name_for_match("ConnectionsMediumBold") == "connectionsmediumbold"
+    assert normalize_font_name_for_match("Connections_Medium_Bold") == "connectionsmediumbold"
+    assert normalize_font_name_for_match("ABCDEF+Connections Medium Bold") == "connectionsmediumbold"
+
+
+def test_connections_medium_bold_variant_matches_ruleset_font():
+    evaluator = FontRuleEvaluator()
+    expected_fonts = [{"name": "ConnectionsMediumBold", "type": "", "encoding": ""}]
+    document_font = {"name": "Connections Medium Bold", "type": "Type0", "encoding": "Identity-H"}
+
+    assert evaluator.is_document_font_expected(document_font, expected_fonts)
 
 
 def retrieve_font_rules_by_name(template_name, rule_set_index=0):

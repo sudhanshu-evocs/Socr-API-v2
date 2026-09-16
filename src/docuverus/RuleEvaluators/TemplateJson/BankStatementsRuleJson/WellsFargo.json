@@ -15,51 +15,111 @@
             "max": 55
         },
         "fonts": {
-            "required_fonts": [
+            "required_fonts": [],
+            "optional_fonts": [
                 {
                     "name": "Helvetica",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "Helvetica-Bold",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "Helvetica-BoldOblique",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "Helvetica-Oblique",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
                 },
                 {
                     "name": "T1",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "Times-Roman",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "ZapfDingbats",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Myriad_Pro_Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-Black",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-BoldIt",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-It",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-Regular",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
                 }
-            ],
-            "optional_fonts": []
+            ]
         },
         "dates": {
             "created": {
@@ -86,63 +146,117 @@
             "max": 400
         },
         "fonts": {
-            "required_fonts": [
+            "required_fonts": [],
+            "optional_fonts": [
                 {
                     "name": "Helvetica",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "Helvetica-Bold",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica,Bold",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-BoldOblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Helvetica-Oblique",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
                 },
                 {
                     "name": "MyriadPro-Black",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "MyriadPro-Bold",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "MyriadPro-BoldIt",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "MyriadPro-It",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "MyriadPro-Regular",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "MyriadPro-Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Myriad_Pro_Light",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
                 },
                 {
                     "name": "SymbolMT,Bold",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
                 },
                 {
                     "name": "ZapfDingbatsITCbyBT-Regular",
                     "type": "",
                     "encoding": "",
-                    "multiplicity": 1
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ZapfDingbats",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Times-Roman",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "Arial",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
+                },
+                {
+                    "name": "ArialMT",
+                    "type": "",
+                    "encoding": "",
+                    "multiplicity": 9999
                 }
-            ],
-            "optional_fonts": []
+            ]
         },
         "dates": {
             "created": {

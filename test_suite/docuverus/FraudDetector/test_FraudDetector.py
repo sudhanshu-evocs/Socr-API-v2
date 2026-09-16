@@ -175,7 +175,7 @@ def test_invalid_file_when_file_size_is_too_big_file2():
     # Act
     result = fraud_detector.get_document_validations(file_path)
     # Assert
-    _assert_invalid_boa_result(result, expected_final_valid="Fail")
+    _assert_invalid_boa_result(result, expected_final_valid="FDR")
     assert result["final_validation_results"]["validation_message_code"] == "MSG_FURTHER_DOCUMENTATION_REQUIRED"
     assert result["template_rule_set_validation_results"][0]["producer"]["valid"] == "Pass"
 
@@ -627,7 +627,7 @@ def test_fraud_detector_gracefully_handles_image_pdf_file():
     result = fraud_detector.get_document_validations("../test_documents/Invalid_Image_PDF.pdf")
 
     assert result["final_validation_results"] == {
-        "valid": "Fail",
+        "valid": "FDR",
         "validation_message_code": "MSG_INVALID_IMAGE_DOCUMENT",
     }
     image_rule_set = result["template_rule_set_validation_results"][0]
@@ -701,7 +701,7 @@ def test_image_metadata_skips_rule_evaluators_and_returns_not_applicable_rule_se
     result = fraud_detector.get_document_validations_for_metadata(metadata)
 
     assert result["final_validation_results"] == {
-        "valid": "Fail",
+        "valid": "FDR",
         "validation_message_code": "MSG_INVALID_IMAGE_DOCUMENT",
     }
     mock_rule_set_factory.get_template_rules.assert_not_called()
@@ -761,7 +761,7 @@ def test_image_metadata_unknown_template_returns_empty_rule_set_with_image_failu
     result = fraud_detector.get_document_validations_for_metadata(metadata)
 
     assert result["final_validation_results"] == {
-        "valid": "Fail",
+        "valid": "FDR",
         "validation_message_code": "MSG_INVALID_IMAGE_DOCUMENT",
     }
     mock_rule_set_factory.get_template_rules.assert_not_called()
@@ -963,7 +963,7 @@ def test_unknown_result_rule_sets_are_sorted_by_producer_then_creator_then_fonts
         "Worst Match",
     ]
     assert result["final_validation_results"] == {
-        "valid": "Fail",
+        "valid": "FDR",
         "validation_message_code": "MSG_FURTHER_DOCUMENTATION_REQUIRED",
     }
 
@@ -993,7 +993,7 @@ def test_unknown_result_rule_sets_treat_fdr_and_not_applicable_as_tied_and_prese
     ]
 
 
-def test_unknown_result_with_first_rule_set_font_failure_returns_fail():
+def test_unknown_result_with_first_rule_set_font_failure_returns_fdr():
     mock_rule_set_factory = MagicMock()
     mock_rule_set_factory.get_template_rules.return_value = [_create_unknown_result_candidate_rule("Only Candidate")]
 
@@ -1002,7 +1002,7 @@ def test_unknown_result_with_first_rule_set_font_failure_returns_fail():
     result = fraud_detector.get_document_validations_for_metadata({"producer": "Any Producer", "creator": "Any Creator", "image_file": False})
 
     assert result["final_validation_results"] == {
-        "valid": "Fail",
+        "valid": "FDR",
         "validation_message_code": "MSG_FURTHER_DOCUMENTATION_REQUIRED",
     }
 
@@ -1783,7 +1783,7 @@ def test_invalid_capital_one_bank_statement():
     result = fraud_detector.get_document_validations(file_path)
     # Assert
     assert result["final_validation_results"] == {
-        "valid": "Fail",
+        "valid": "FDR",
         "validation_message_code": "MSG_FURTHER_DOCUMENTATION_REQUIRED",
     }
     assert len(result["template_rule_set_validation_results"]) == 6

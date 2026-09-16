@@ -99,13 +99,14 @@ class FontRuleEvaluator(RuleEvaluator):
         font_name = font["name"] if font["name"] else ""
         font_type = font["type"] if font["type"] else ""
         font_encoding = font["encoding"] if font["encoding"] else ""
+        normalized_font_name = normalize_font_name_for_match(font_name)
 
         if self.is_blank_type_and_encoding(font):
             max_multiplicity = 0
             for page_font in page_font_set:
                 page_font = list(page_font)
                 page_font = [value if value else "" for value in page_font]
-                if page_font[1] == font_name:
+                if normalize_font_name_for_match(page_font[1]) == normalized_font_name:
                     if page_font[3] > max_multiplicity:
                         max_multiplicity = page_font[3]
             if max_multiplicity > 0:
@@ -119,7 +120,11 @@ class FontRuleEvaluator(RuleEvaluator):
             page_font = list(page_font)
             page_font = [value if value else "" for value in page_font]
 
-            if (page_font[1] == font_name) and (page_font[0] == font_type) and (page_font[2] == font_encoding):
+            if (
+                normalize_font_name_for_match(page_font[1]) == normalized_font_name
+                and (page_font[0] == font_type)
+                and (page_font[2] == font_encoding)
+            ):
                 font["actual_multiplicity"] = page_font[3]
                 logging.info(f"Font found in document: {font}")
                 return True
@@ -133,13 +138,14 @@ class FontRuleEvaluator(RuleEvaluator):
         doc_name = doc_font_dict["name"] if doc_font_dict["name"] else ""
         doc_type = doc_font_dict["type"] if doc_font_dict["type"] else ""
         doc_encoding = doc_font_dict["encoding"] if doc_font_dict["encoding"] else ""
+        normalized_doc_name = normalize_font_name_for_match(doc_name)
 
         for expected_font in expected_fonts:
             expected_name = expected_font["name"] if expected_font["name"] else ""
             expected_type = expected_font["type"] if expected_font["type"] else ""
             expected_encoding = expected_font["encoding"] if expected_font["encoding"] else ""
 
-            if expected_name != doc_name:
+            if normalize_font_name_for_match(expected_name) != normalized_doc_name:
                 continue
 
             if self.is_blank_type_and_encoding(expected_font):
@@ -223,3 +229,11 @@ def get_font_name(font_str):
         if match:
             font_str = match.group(pattern[1])
     return font_str
+
+
+def normalize_font_name_for_match(font_str):
+    """Match font names ignoring spaces, underscores, hyphens, and case.
+
+    Example: "Connections Medium Bold" matches "ConnectionsMediumBold".
+    """
+    return re.sub(r"[^a-z0-9]", "", get_font_name(font_str or "").lower())
